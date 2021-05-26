@@ -1,0 +1,1281 @@
+@font-face {font-family: "MyriadPro-Regular";
+  src: url("../css/fonts/MyriadPro-Regular.otf") format("TTF"), /* chrome、firefox */
+  url("../css/fonts/MyriadPro-Regular.otf") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+}
+@font-face {font-family: "Montserrat-Regular";
+  src: url("../css/fonts/Montserrat-Regular.ttf") format("TTF"), /* chrome、firefox */
+  url("../css/fonts/Montserrat-Regular.ttf") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+}
+@font-face {font-family: "montserrat-bold";
+  src: url("../css/fonts/montserrat-bold.ttf") format("TTF"), /* chrome、firefox */
+  url("../css/fonts/montserrat-bold.ttf") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+}
+@font-face {font-family: "MyriadPro-Bold";
+  src: url("../css/fonts/MyriadPro-Bold.otf") format("TTF"), /* chrome、firefox */
+  url("../css/fonts/MyriadPro-Bold.otf") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+}
+
+@font-face {font-family: "SemiBoldItalic";
+  src: url("../css/fonts/Montserrat-SemiBoldItalic.otf") format("TTF"), /* chrome、firefox */
+  url("../css/fonts/Montserrat-SemiBoldItalic.otf") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+}
+
+@font-face {font-family: "Atlantis";
+  src: url("../css/fonts/Atlantis the lost City.ttf") format("TTF"), /* chrome、firefox */
+  url("../css/fonts/Atlantis the lost City.ttf") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+}
+
+
+@font-face {font-family: "OpenSans-Bold";
+  src: url("../css/fonts/OpenSans-Bold.ttf") format("TTF"), /* chrome、firefox */
+  url("../css/fonts/OpenSans-Bold.ttf") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+}
+
+
+@font-face {font-family: "OpenSans-Regular";
+  src: url("../css/fonts/OpenSans-Regular.ttf") format("TTF"), /* chrome、firefox */
+  url("../css/fonts/OpenSans-Regular.ttf") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+}
+
+@font-face {font-family: "Bree ExtraBold";
+  src: url("../css/fonts/Bree ExtraBold.otf") format("TTF"), /* chrome、firefox */
+  url("../css/fonts/Bree ExtraBold.otf") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+}
+
+@font-face {font-family: "Lora-Regular";
+  src: url("../css/fonts/Lora-Regular.ttf") format("TTF"), /* chrome、firefox */
+  url("../css/fonts/Lora-Regular.ttf") format("truetype"); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+}
+
+.alertify-button-ok, .alertify-button-ok:hover, .alertify-button-ok:focus {
+    background-color: #00C4C3 !important;    border: 1px solid #008594 !important;
+}
+
+.bg-white{
+  background-color: #fff;
+}
+
+
+
+body{
+  background-color: #e2e2e2;
+}
+
+
+/*ESTILOS MEDYCAREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE LANDING*/
+
+#MainMedy{
+  height:792px;
+  background-image: url('../images/header.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  background-color: #fff;
+}
+
+#rowOneMedy{
+  position: relative;
+  top: 110px;
+}
+
+.LogoMedy{
+  position: relative;
+  z-index: 10000 !important ;
+}
+
+
+.weolcome{
+    font-family: "Montserrat-Regular";
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+}
+
+
+#contFormMedy{
+  padding-right: 60px;
+}
+
+
+
+.enferMedy{
+  color: #fff;
+  text-align: center;
+  font-family: "montserrat-bold";
+  font-size: 38px;
+  margin: 0;
+  padding: 0;
+}
+
+.num {
+    text-align: center;
+    color: red;
+    font-size: 72px;
+    margin: 0;
+    padding: 0px 0px 0px 158px;
+    font-family: "montserrat-bold";
+}
+
+.horasMedy {
+    color: #fff;
+    font-family: "Montserrat-Regular";
+    font-size: 25px;
+    padding-left: 14px;
+}
+
+
+.contFrase{
+  position: relative;
+  top: 90px;
+  left: 30px;
+}
+
+
+.modeloMedy {
+    width: 380px;
+    float: right;
+    position: relative;
+    top: -100px;
+}
+
+
+.hrone1{
+  margin-top: -3px;
+  margin-bottom: 2px;
+  border: 0;
+  border-top: 1px solid #000;
+  width: 50px;
+  float: left;
+}
+
+.hrtwo2{
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border: 0;
+  border-top: 1px solid #000;
+  width: 100px;
+  float: left;
+}
+
+
+.hrone{
+  margin-top: -3px;
+  margin-bottom: 2px;
+  border: 0;
+  border-top: 1px solid #000;
+  width: 50px;
+
+}
+
+.hrtwo{
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border: 0;
+  border-top: 1px solid #000;
+  width: 100px;
+
+}
+
+
+.pf{
+  padding-top: 10px;
+  color: #fff;
+  font-family: "MyriadPro-Regular";
+  font-size: 18px;
+}
+
+
+#InfoMedy{
+  height: 310px;
+  background-color: #fff;
+}
+
+#conozMedy{
+  color: #5885dc;
+  font-family: "montserrat-bold";
+  margin: 0;
+  padding: 0;
+
+}
+
+#exp{
+  font-family: "MyriadPro-Regular";
+  color: #000;
+  font-size: 17px;
+  margin: 0;
+  padding: 0;
+}
+
+#pMedy{
+  font-family: "MyriadPro-Regular";
+  color: #000;
+  font-size: 17px;
+  text-align: justify-all;
+  padding-right: 25px;
+}
+
+
+#rowOneService2{
+
+  position: relative;
+  top: 100px;
+
+}
+
+
+#garan{
+  font-family: "MyriadPro-Regular";
+  color: #000;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+
+#serv{
+  color: #5885dc;
+  font-family: "montserrat-bold";
+  margin: 0;
+  padding: 0;
+  font-size: 45px;
+}
+
+
+
+
+
+
+
+
+#servicesMedy{
+  height:971px;
+  background-image: url('../images/fondoGray.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+
+}
+
+
+/*
+.carousel-inner.onebyone-carosel { margin: auto; width: 100%; }
+.onebyone-carosel .active.left { left: -33.33%; }
+.onebyone-carosel .active.right { left: 33.33%; }
+.onebyone-carosel .next { left: 33.33%; }
+.onebyone-carosel .prev { left: -33.33%; }
+*/
+
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #000\9;
+    background-color: rgba(150, 16, 16, 0.95) !important ;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+
+
+#galeriaServicesMedy{
+  position: relative;
+  top: 170px;
+}
+
+
+
+#cuadro1Medy{
+  height: 404px;
+  background-image: url('../images/c1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+#cuadro2Medy{
+  height: 404px;
+  background-image: url('../images/c2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+#cuadro3Medy{
+  height: 404px;
+  background-image: url('../images/c3.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+
+
+.carousel-control.right, .carousel-control.left  {
+    right: 0;
+    left: auto;
+
+    background-image: none;
+    background-color: none;
+
+}
+
+
+.cont{
+  padding: 120px 40px;
+}
+
+
+
+.titleSer{
+  color: #f27f7f;
+  font-family: "MyriadPro-Regular";
+  font-size: 18px;
+
+}
+
+.veinte{
+  color: #db0000;
+  font-size: 17px;
+}
+
+
+.carousel-indicators {
+    bottom: -51px !important;
+}
+
+
+.descrip{
+
+  font-family: "MyriadPro-Regular";
+  color: #000;
+
+
+}
+
+
+
+#titleSer{
+
+
+
+}
+
+
+
+
+#footer{
+  padding: 20px;
+  height: 120px;
+  background-color: #4283eb;
+}
+
+
+
+#movil_what {
+
+    position: fixed;
+    text-decoration: none;
+    z-index: 9999;
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    /* border: 2px solid #fff; */
+    bottom: 40px;
+    right: 20px;
+    background-image: url(../images/WhatsApp_logo_12.png);
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#FondoMain{
+  height: 840px;
+  background-image: url('../images/fondo dhi 1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+}
+
+
+
+.areas {
+
+  color: #254061;
+  font-family: "Open Sans",Arial,sans-serif;
+  font-size: 28px;
+  padding-top: 30px;
+
+}
+
+.tra {
+  font-family: "Open Sans",Arial,sans-serif;
+  color: #666;
+  font-size: 22px;
+}
+
+.line{
+  margin-top: 20px;
+      margin-bottom: 20px;
+      border: 0;
+      border-top: 1px solid #00c4c3;
+      width: 50%;
+}
+
+.cont-tra{
+  text-align: center;
+
+}
+
+
+.logoTra{
+  width: 220px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+
+.cont-tra h4 {
+  font-weight: 500;
+  font-size: 25px;
+  color: #378491!important;
+  text-align: center;
+  font-family: "Open Sans",Arial,sans-serif;
+
+}
+
+.cont-tra p {
+  color: #666;
+  font-family: "Open Sans",Arial,sans-serif;
+  text-align: justify;
+  font-size: 18px;
+  padding: 5px 5px;
+
+}
+
+#GaleriaBeneficiosMovil{
+  display: none;
+}
+
+#cont-programas-mobil{
+  display: none;
+}
+
+.pdd{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+
+.input{
+  background-color: rgba(255,255,255,0.66);
+  font-size: 16px;
+  box-shadow: 3px 3px 12px 0px rgba(0,0,0,0.3);
+  color: #000000;
+  padding: 22px;
+  margin: 0px 30px 0px 10px;
+  border-radius: 0;
+}
+
+select{
+  color: #000 !important;
+  background-color: rgba(255,255,255,0.66) !important;
+  font-size: 16px !important;
+  border-radius: 0 !important;
+  margin: 0px 30px 0px 10px;
+  height: 45px !important;
+}
+
+.sp{
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+
+
+#fondo-main{
+  width: 100%;
+  height:820px;
+  background-image: url('../images/Pareja.jpg');
+
+  background-attachment: fixed;
+}
+
+.Logo{
+  width:240px;
+  padding-top: 30px;
+
+}
+
+.texto{
+  font-family: "Open Sans",Arial,sans-serif;
+  font-size: 34px;
+  color: #fff;
+  text-align: center;
+  margin: 0px 10px;
+  font-weight: 500;
+}
+
+#date{
+  font-family: "Open Sans",Arial,sans-serif;
+  font-size: 26px;
+  text-align: center;
+  color: #fff;
+}
+
+#mayus{
+    font-family: "Open Sans",Arial,sans-serif;
+    font-size: 38px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#PosForm{
+  position: relative;
+  top: 170px;
+}
+
+.bg-black{
+  background-color: #000;
+}
+
+
+footer {
+  color: #666666;
+  font-size: medium;
+  font-family: "Open Sans",Arial,sans-serif;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+#title{
+  text-align: center;
+  font-size: 18px;
+}
+
+.tx{
+  text-align: center;
+}
+.redes{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.redes li{
+  display: inline-block;
+  font-family: "Open Sans",Arial,sans-serif;
+}
+
+.links li{
+  text-align: left;
+  padding: 0px 0px 0px 20px;
+}
+
+.links li a{
+  color:#666666;
+  font-family: "Open Sans",Arial,sans-serif;
+}
+
+.redes li img {
+  width: 33px;
+  background-color: #fff;
+  margin: 2px;
+}
+
+
+.ter{
+  color: #fff;
+  font-family: "Open Sans",Arial,sans-serif;
+  font-size: 17px;
+  font-weight: 200;
+}
+
+.termi{
+  text-decoration: underline;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.termi:hover{
+  text-decoration: underline;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.sp2{
+  padding: 20px 0px;
+}
+
+input[type=checkbox]{
+  background-color: rgba(255,255,255,0.66);
+  width: 18px;
+  height: 18px;
+  font-style: normal;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+
+#Enviar{
+  float: right;
+  margin: 0;
+  padding: 13px;
+  color: #ffffff!important;
+  border-width: 0px!important;
+  background-color: #82e4fd;
+  font-size: 22px;
+  font-weight: 500;
+  display: inline-block;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-family: "montserrat-bold";
+}
+
+
+#Enviar span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#Enviar span:after {
+  content: '\003e';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#Enviar:hover span {
+  padding-right: 25px;
+}
+
+#Enviar:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.error{
+  color: #ea3939;
+}
+
+.numeros{
+  color: #254061!important;
+  text-align: center;
+  position: relative;
+  top: 0px
+}
+
+
+.numeros .pc{
+  font-size: 70px;
+  font-family: "Open Sans",Arial,sans-serif;
+  font-weight: 500;
+}
+
+
+.numeros h1{
+  font-size: 58px;
+  font-family: "Open Sans",Arial,sans-serif;
+  font-weight: 400;
+}
+.numeros p{
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Open Sans",Arial,sans-serif;
+}
+
+
+#Testimonio{
+  height: 700px;
+  background-image: url('../images/fondo 2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.ppT{
+  font-family: "Open Sans",Arial,sans-serif;
+  color: #fff;
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+
+}
+
+#posTitulo{
+  position: relative;
+  top: 110px;
+}
+
+#galeria{
+  position: relative;
+  top: 170px;
+}
+
+
+#titleG{
+  color: #fff;
+  font-family: "Open Sans",Arial,sans-serif;
+  font-size: 35px;
+  text-align: center;
+
+}
+
+
+#pG{
+  color: #fff;
+  font-family: "Open Sans",Arial,sans-serif;
+  font-size: 20px;
+  padding: 5px 20px;
+  text-align: justify;
+}
+
+.fotoT{
+  widows: 85%;
+  margin: 0 auto;
+}
+
+/*/*placeholder*/
+.input::-webkit-input-placeholder { color: #000;}
+.input:-moz-placeholder { color: #000;  }
+.input::-moz-placeholder { color: #000;  }
+.input:-ms-input-placeholder { color: #000;  }
+
+
+
+/************************************** RESPONSIVE DESIGN********************************************************/
+
+
+@media screen and (max-width: 1199px){
+
+
+
+    #cuadro1Medy{
+      height: 430px;
+      background-image: url('../images/c1.png');
+      background-position: inherit;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: #fff;
+      margin: 5px;
+      width: 310px;
+
+    }
+
+    #cuadro2Medy{
+      height: 430px;
+      background-image: url('../images/c2.png');
+      background-position: inherit;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: #fff;
+      margin: 5px;
+      width: 310px;
+
+    }
+
+    #cuadro3Medy{
+      height: 430px;
+      background-image: url('../images/c3.png');
+      background-position: inherit;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: #fff;
+      margin: 5px;
+      width: 310px;
+
+    }
+
+
+    .pdd{
+      padding-right: 2px;
+      padding-left: 2px;
+    }
+
+
+
+
+    .num {
+        text-align: center;
+        color: red;
+        font-size: 72px;
+        margin: 0;
+        padding: 0px 0px 0px 104px;
+        font-family: "montserrat-bold";
+    }
+
+
+    input[type=checkbox] {
+        background-color: rgba(255,255,255,0.66);
+        width: 14px;
+        height: 14px;
+        font-style: normal;
+        vertical-align: middle;
+        margin-right: 6px;
+    }
+
+    .ter {
+        color: #fff;
+        font-family: "Open Sans",Arial,sans-serif;
+        font-size: 14px;
+        font-weight: 200;
+    }
+
+    .termi {
+        text-decoration: underline;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .numeros {
+        color: #fff;
+        text-align: center;
+        position: relative;
+        top: 0px;
+    }
+
+    #PosForm {
+        position: relative;
+        top: 135px;
+    }
+
+    .cont-tra p {
+        color: #666;
+        font-family: "Open Sans",Arial,sans-serif;
+        text-align: justify;
+        font-size: 18px;
+        padding: 5px 7px;
+    }
+
+
+}
+
+@media screen and (max-width: 991px){
+
+  /*#rowOneService{display: none;}*/
+
+  #cuadro1Medy{
+    height: 500px;
+    background-image: url('../images/c1.png');
+    background-position: inherit;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #fff;
+    margin: 1px;
+    width: 235px;
+
+  }
+
+  #cuadro2Medy{
+    height: 500px;
+    background-image: url('../images/c2.png');
+    background-position: inherit;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #fff;
+    margin: 1px;
+    width: 235px;
+
+  }
+
+  #cuadro3Medy{
+    height: 500px;
+    background-image: url('../images/c3.png');
+    background-position: inherit;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #fff;
+    margin: 1px;
+    width: 235px;
+
+  }
+
+  .cont {
+      padding: 77px 40px;
+  }
+
+  #galeriaServicesMedy {
+      position: relative;
+      top: 199px;
+  }
+
+  #rowOneService2 {
+      position: relative;
+      top: 170px;
+  }
+
+
+  .pdd{
+    padding-right: 1px;
+    padding-left: 1px;
+  }
+
+
+
+  .modeloMedy {
+      width: 327px;
+      float: right;
+      position: relative;
+      top: -49px;
+  }
+
+
+  #MainMedy {
+      height: 792px;
+      background-image: url(../images/header.png);
+      background-position: initial;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 1;
+  }
+
+  .contFrase {
+      position: relative;
+      top: 0;
+      left: 30px;
+  }
+
+  #OneBr{
+    display: none;
+  }
+
+  #rowOneMedy {
+      position: relative;
+      top: 140px;
+  }
+
+  .enferMedy {
+      color: #fff;
+      text-align: center;
+      font-family: "montserrat-bold";
+      font-size: 30px;
+      margin: 0;
+      padding: 0;
+      width: 85%;
+  }
+
+
+  .row {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+
+
+}
+
+
+
+@media screen and (max-width: 767px){
+
+  #footer{
+    height: auto;
+  }
+
+
+  .modeloMedy {
+      width: 282px;
+      float: right;
+      position: relative;
+      top: -184px;
+      margin: 0 auto;
+  }
+
+  #Infor{
+    position: relative;
+    top: -300px;
+  }
+
+  #pMedy {
+      font-family: "MyriadPro-Regular";
+      color: #000;
+      font-size: 17px;
+      text-align: justify-all;
+      padding-right: 170px;
+  }
+  .pdd {
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+
+  #contFormMedy {
+      padding-right: 20px;
+  }
+
+
+  #rowOneService2 {
+      position: relative;
+      top: 0px;
+  }
+
+  #cuadro2Medy {
+      height: 404px;
+      background-image: url(../images/c2.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 384px;
+  }
+
+  #cuadro1Medy {
+      height: 404px;
+      background-image: url(../images/c1.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 384px;
+  }
+
+  #cuadro3Medy {
+      height: 404px;
+      background-image: url(../images/c3.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 384px;
+  }
+
+  #galeriaServicesMedy {
+      position: relative;
+      top: 40px;
+
+  }
+
+  .tx1{
+    text-align: center !important;
+    padding-left: 170px;
+  }
+
+
+
+  #servicesMedy {
+      height: auto;
+      background-image: url(../images/fondoGray.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 1;
+      padding-bottom: 100px;
+  }
+
+  #InfoMedy {
+      height: 70px;
+      background-color: #fff;
+  }
+
+
+}
+
+
+@media screen and (max-width: 600px){
+
+  .modeloMedy {
+      width: 256px;
+      float: right;
+      position: relative;
+      top: -184px;
+      margin: 0 auto;
+  }
+
+  #Infor {
+      position: relative;
+      top: -248px;
+  }
+
+  .tx1{
+    text-align: center !important;
+    padding-left: 70px;
+  }
+
+
+
+}
+
+
+
+@media screen and (max-width: 500px){
+
+
+  .tx1{
+    text-align: center !important;
+    padding-left: 20px;
+  }
+
+  .modeloMedy {
+      width: 244px;
+      float: right;
+      position: relative;
+      top: -52px;
+      margin: 0 auto;
+  }
+
+  #Infor {
+      position: relative;
+      top: -41px;
+  }
+  #pMedy {
+      font-family: "MyriadPro-Regular";
+      color: #000;
+      font-size: 17px;
+      text-align: justify-all;
+      padding-right: 20px;
+  }
+
+
+  .num {
+      text-align: center;
+      color: red;
+      font-size: 72px;
+      margin: 0;
+      padding: 0px 0px 0px 52px;
+      font-family: "montserrat-bold";
+  }
+
+  .horasMedy {
+      color: #fff;
+      font-family: "Montserrat-Regular";
+      font-size: 25px;
+      padding-left: 0;
+      position: relative;
+      left: -26px;
+  }
+
+
+
+
+
+}
+
+
+@media screen and (max-width: 440px){
+    
+#Enviar {
+    float: right;
+    margin: 0;
+    width: 100%;
+    padding: 13px;
+    color: #ffffff!important;
+    border-width: 0px!important;
+    background-color: #82e4fd;
+    font-size: 15px;
+    font-weight: 500;
+    display: inline-block;
+    transition: all 0.5s;
+    cursor: pointer;
+    font-family: "montserrat-bold";
+
+}   
+    
+  .cont {
+      padding: 128px 20px 20px 20px;
+  }
+
+
+  #cuadro2Medy {
+      height: auto;
+      background-image: url(../images/c2.png);
+      background-position: inherit;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%
+  }
+
+  #cuadro1Medy {
+      height: auto;
+      background-image: url(../images/c1.png);
+      background-position: inherit;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%
+  }
+
+  #cuadro3Medy {
+      height: auto;
+      background-image: url(../images/c3.png);
+      background-position: inherit;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%
+  }
+
+  .tx1 {
+      text-align: center !important;
+      padding-left: 1px;
+  }
+
+
+}
+
+@media screen and (max-width: 390px){
+
+  .num {
+      text-align: center;
+      color: red;
+      font-size: 72px;
+      margin: 0;
+      padding: 0px 0px 0px 0px;
+      font-family: "montserrat-bold";
+  }
+
+}
+
+
+@media screen and (max-width: 330px){
+    #Enviar {
+    float: right;
+    margin: 0;
+    width: 100%;
+    padding: 13px;
+    color: #ffffff!important;
+    border-width: 0px!important;
+    background-color: #82e4fd;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+    transition: all 0.5s;
+    cursor: pointer;
+    font-family: "montserrat-bold";
+
+}
+}
+
+
+
+
+
+
