@@ -3,8 +3,8 @@
 // datos de configuracion de la base de datos.
 $dataBase = array(
 	'host'=>'localhost',
-	'user'=>'univalle_root',
-	'pass'=>'Ca1zA+EqV_5,',
-	'baseDatos'=>'univalle_flex',
+	'user'=>'posgradosunivall_flex',
+	'pass'=>'r_C=JJ5h=#xN',
+	'baseDatos'=>'posgradosunivall_flex',
 	'motorDB'=>'mysql'
 );
