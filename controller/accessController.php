@@ -19,7 +19,7 @@ try {
       $r = $access->login($_REQUEST['txtUser'], md5($_REQUEST['txtPass']));
       if ($db->numRows($r)) {
         $d = $db->datos($r);
-        if ($d['Id'] > 0) {
+        if (($d['Id'] ?? 0) > 0) {
           //Session::set('sess_time',time());
           Session::set('sess_id', Session::getId());
           Session::set('sess_access', true);
@@ -36,7 +36,7 @@ try {
           $jsondata['message'] = "Acceso permitido ";
         } else {
           $jsondata['success'] = false;
-          $jsondata['message'] = "Información de acceso incorrecta ";
+          $jsondata['message'] = "Información de acceso incorrecta: " . $d['Id'];
         }
       } else {
         $jsondata['success'] = false;

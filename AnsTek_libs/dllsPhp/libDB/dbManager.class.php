@@ -94,211 +94,64 @@ class dbManager
 		}
 	}
 
-
-
-
-
-
-
 	/**
-
-
-
 	 * Ingresa datos a la BD
-
-
-
 	 * @param $data: Informacion a ingresar, tipo array
-
-
-
 	 * @param $where: condición del registro a modificar
-
-
-
 	 * @param $table: Tabla a la cual se ingresar� la informaci�n
-
-
-
 	 */
-
-
 
 	public function updateData($data, $where, $table)
 	{
-
-
-
 		$set = substr($this->prepareDat($data, 1), 0, strlen($this->prepareDat($data, 1)) - 2);
-
-
-
-
-
-
-
 		if (strpos($where, 'where') === false)
-
-
-
 			$where = "WHERE " . $where;
-
-
-
-
-
-
-
 		$sql = "UPDATE " . $table . " SET " . $set . "  " . $where;
-
-
-
 		//echo $sql;
-
-
-
-
-
-
-
 		$result = $this->DB->prepare($sql);
-
-
-
 		if ($result->execute()) {
-
-
-
 			return true;
 		} else {
-
-
-
 			return false;
 		}
 	}
 
-
-
-
-
-
-
 	/**
-
-
-
 	 * Elimina datos a la BD
-
-
-
 	 * @param $table: Tabla de la cual se eliminará la informaci�n
-
-
-
 	 * @param $idDel: id(s) a eliminar, tipo array
-
-
-
 	 */
-
-
 
 	public function deleteData($table, $idDel)
 	{
-
-
-
 		$sql = "DELETE FROM " . $table . " WHERE id in(" . $idDel . ")";
-
-
-
 		//echo $sql;
-
-
-
 		$result = $this->DB->prepare($sql);
-
-
-
 		if ($result->execute()) {
-
-
-
 			return true;
 		} else {
-
-
-
 			return false;
 		}
 	}
 
-
-
-
-
-
-
 	/*Metodo para obtener una fila de resultados de la sentencia sql*/
-
-
-
 	public function datos($result)
-
-
-
 	{
-
-
-
 		switch ($this->motor) {
-
-
-
 			case 'mysql':
-
-
-
 				$this->arrayDatos = $result->fetch(PDO::FETCH_ASSOC);
-
-
-
 				break;
 		}
-
-
-
 		return $this->arrayDatos;
 	}
 
-
-
-
-
-
-
 	/**
-
-
-
 	 * Retorna el numero de resultados de una consulta
-
-
-
 	 * @param $result
-
-
-
 	 */
-
-
 
 	public function numRows($result)
 	{
-
-
-
 		return $result !== false;
 	}
 
