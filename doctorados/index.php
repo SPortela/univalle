@@ -80,7 +80,7 @@ if (empty($_GET)) {
                   </div>
                   <div class="form-group">
                     <label for="txtPrograma"></label>
-                    <select class="form-control form-control-lg" name="txtPrograma" id="txtPrograma">
+                    <select class="form-select form-select-lg" name="txtPrograma" id="txtPrograma">
                       <option value="DOCTORADO EN ADMINISTRACIÓN">DOCTORADO EN ADMINISTRACIÓN</option>
                       <option value="DOCTORADO EN BIOINGENIERÍA">DOCTORADO EN BIOINGENIERÍA</option>
                       <option value="DOCTORADO EN CIENCIAS - FÍSICA">DOCTORADO EN CIENCIAS - FÍSICA</option>

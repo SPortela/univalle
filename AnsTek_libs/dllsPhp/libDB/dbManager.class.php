@@ -44,37 +44,16 @@ class dbManager
 		return self::$_instancia;
 	}
 
-
-
-
-
-
-
 	/*Realiza la conexión a la base de datos utilizando PDO.*/
-
-
-
 	private function conectar()
-
-
-
 	{
-
-
-
 		switch ($this->motor) {
-
-
-
 			case 'mysql':
-
-
-
 				try {
 					$this->DB = new PDO('mysql:host=' . $this->host . '; dbname=' . $this->base_datos . ';charset=utf8', $this->user, $this->pass);
 					$this->DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 					$this->DB->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-				} catch (PDOExeption $e) {
+				} catch (PDOException $e) {
 					echo $e->getMessage();
 					die();
 				}
@@ -82,124 +61,35 @@ class dbManager
 		}
 	}
 
-
-
-
-
-
-
 	/**
-
-
-
 	 * Método para ejecutar una sentencia select de sql
-
-
-
 	 */
-
-
-
 	public function ejecutar($sql)
-
-
-
 	{
-
-
-
 		switch ($this->motor) {
-
-
-
 			case 'mysql':
-
-
-
 				$this->result = $this->DB->query($sql);
-
-
-
 				break;
 		}
-
-
-
 		return $this->result;
 	}
 
-
-
-
-
-
-
 	/**
-
-
-
 	 * Ingresa datos a la BD
-
-
-
 	 * @param $data: Informacion a ingresar, tipo array
-
-
-
 	 * @param $table: Tabla a la cual se ingresar� la informaci�n
-
-
-
 	 */
-
-
-
 	public function insertData($data, $table)
 	{
-
-
-
 		//Prerara el Insert
-
-
-
 		$dat = substr($this->prepareDat($data), 0, strlen($this->prepareDat($data)) - 1);
-
-
-
 		$cmp = str_replace(":", "", $dat);
-
-
-
-
-
-
-
 		$sql = "INSERT INTO " . $table . " (" . $cmp . ") VALUES (" . $dat . ")";
-
-
-
 		//echo $sql;
-
-
-
-
-
-
-
 		$result = $this->DB->prepare($sql);
-
-
-
 		if ($result->execute($data)) {
-
-
-
 			return true;
 		} else {
-
-
-
 			return false;
 		}
 	}

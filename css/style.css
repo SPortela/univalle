@@ -28,6 +28,11 @@ footer {
   line-height: 4rem;
   padding-top: 1rem;
 }
+
+.text-posgrado{
+  font-size: 7rem;
+}
+
 .sections {
   display: flex;
   flex-direction: column;

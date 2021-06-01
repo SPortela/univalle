@@ -30,7 +30,7 @@ if (empty($_GET)) {
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5">
           <p class="text-center text-header">
             Ofrecemos una amplia oferta de <br />
-            <strong class="text-red" style="font-size: 7rem">POSGRADOS</strong><br />
+            <strong class="text-red text-posgrado">POSGRADOS</strong><br />
             en diversos campos del conocimiento
           </p>
         </div>
@@ -79,7 +79,7 @@ if (empty($_GET)) {
                   </div>
                   <div class="form-group">
                     <label for="txtSede"></label>
-                    <select class="form-control form-control-lg" name="txtSede" id="txtSede">
+                    <select class="form-select form-select-lg" name="txtSede" id="txtSede">
                       <option value="0">SEDE</option>
                       <option value="1">CALI</option>
                       <option value="2">BUGA</option>
@@ -93,7 +93,7 @@ if (empty($_GET)) {
                   </div>
                   <div class="form-group">
                     <label for="txtFacultad"></label>
-                    <select class="form-control form-control-lg" name="txtFacultad" id="txtFacultad" disabled>
+                    <select class="form-select form-select-lg" name="txtFacultad" id="txtFacultad" disabled>
                       <option value="0">FACULTAD</option>
                       <option value="1">CIENCIAS NATURALES</option>
                       <option value="2">HUMANIDADES</option>
@@ -108,7 +108,7 @@ if (empty($_GET)) {
                   </div>
                   <div class="form-group">
                     <label for="txtPrograma"></label>
-                    <select class="form-control form-control-lg" name="txtPrograma" id="txtPrograma">
+                    <select class="form-select form-select-lg" name="txtPrograma" id="txtPrograma">
                       <option value="">PROGRAMA</option>
                     </select>
                   </div>
