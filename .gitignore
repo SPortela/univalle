@@ -16,3 +16,6 @@
 #*.jpg
 #*.jpeg
 #*.xlsx
+
+### Datos de conexión ###
+AnsTek_libs/dllsPhp/libDB/configDB.php
