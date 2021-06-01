@@ -21,10 +21,7 @@ $("#login").validate({
       data: { accion: "login", txtUser: $("#txtUser").val(), txtPass: $("#txtPass").val() },
       type: "POST",
       datatype: "json",
-      url: "../controller/accessController.php",
-      error: function (jqXHR, textStatus, errorThrown) {
-        console.error(jqXHR, textStatus, errorThrown);
-      }
+      url: "../controller/accessController.php"
     })
       .done(function (data) {
         if (data.success) {
@@ -50,9 +47,6 @@ $("#login").validate({
         }
       })
       .fail(function (jqXHR, textStatus, errorThrown) {
-        console.error(jqXHR, textStatus, errorThrown);
-      })
-      .always(function (jqXHR, textStatus, errorThrown) {
         console.error(jqXHR, textStatus, errorThrown);
       });
   },
