@@ -24,7 +24,10 @@
 		 */
 		public function login($user, $pass){
 			$sql = "SELECT Id, Nombre, Cedula, Direccion, Telefono, Perfil, Foto, Email
-					FROM ".$this->table ." WHERE Usuario = '".$user."' AND Password = '".$pass."' and Status = 1";
+					FROM ". $this->table . 
+					" WHERE Usuario = '" .$user.
+					"' AND Password = '" .$pass. 
+					"' AND Status = 1";
 					//echo $sql;
 			$result = $this->db->ejecutar($sql);
 			if($this->db->numRows($result)){
@@ -43,7 +46,10 @@
 		 */
 		public function loginUser($user, $pass){
 			$sql = "SELECT Id, Nombre, Cedula, Direccion, Telefono, Perfil, Email
-					FROM ".$this->table ." WHERE Usuario = '".$user."' AND Password = '".$pass."' and Status = 1 and Perfil = 2";
+					FROM ". $this->table . 
+					" WHERE Usuario = '" .$user.
+					"' AND Password = '" .$pass.
+					"' AND Status = 1 AND Perfil = 2";
 					//echo $sql;
 			$result = $this->db->ejecutar($sql);
 			if($this->db->numRows($result)){
