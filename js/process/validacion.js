@@ -17,8 +17,10 @@ $("#login").validate({
     },
   },
   submitHandler: function () {
+    var vUser = $("#txtUser").val();
+    var vPass = $("#txtPass").val();
     $.ajax({
-      data: { accion: "login", txtUser: $("#txtUser").val(), txtPass: $("#txtPass").val() },
+      data: { accion: "login", txtUser: vUser, txtPass: vPass },
       type: "POST",
       datatype: "json",
       url: "../controller/accessController.php"
