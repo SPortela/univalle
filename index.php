@@ -291,7 +291,7 @@ if (empty($_GET)) {
     </div>
   </footer>
   <!-- Scripts -->
-  <script type="text/javascript" src="front/js/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
   <script type="text/javascript" src="front/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="front/js/jquery.validate.min.js"></script>
   <script type="text/javascript" src="front/js/valid.js"></script>

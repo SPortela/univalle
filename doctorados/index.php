@@ -105,88 +105,6 @@ if (empty($_GET)) {
                       <option value="DOCTORADO EN CIENCIAS - MATEMÁTICAS">DOCTORADO EN CIENCIAS - MATEMÁTICAS</option>
                       <option value="DOCTORADO EN PSICOLOGÍA">DOCTORADO EN PSICOLOGÍA</option>
                       <option value="DOCTORADO INTERINSTITUCIONAL EN EDUCACIÓN">DOCTORADO INTERINSTITUCIONAL EN EDUCACIÓN</option>
-                      <option value="MAESTRÍA EN ADMINISTRACIÓN - SEDE CALI">MAESTRÍA EN ADMINISTRACIÓN - SEDE CALI</option>
-                      <option value="MAESTRÍA EN ADMINISTRACIÓN - SEDE TULUÁ">MAESTRÍA EN ADMINISTRACIÓN - SEDE TULUÁ</option>
-                      <option value="MAESTRÍA EN EPIDEMIOLOGÍA">MAESTRÍA EN EPIDEMIOLOGÍA</option>
-                      <option value="MAESTRÍA EN EDUCACIÓN ÉNFASIS EN PEDAGOGÍA DE LA EDUCACIÓN SUPERIOR - SEDE ZARZAL">MAESTRÍA EN EDUCACIÓN ÉNFASIS EN PEDAGOGÍA DE LA EDUCACIÓN SUPERIOR - SEDE ZARZAL</option>
-                      <option value="MAESTRÍA EN EDUCACIÓN ÉNFASIS EN FILOSOFÍA PARA LA PAZ">MAESTRÍA EN EDUCACIÓN ÉNFASIS EN FILOSOFÍA PARA LA PAZ</option>
-                      <option value="MAESTRÍA EN DESARROLLO SUSTENTABLE">MAESTRÍA EN DESARROLLO SUSTENTABLE</option>
-                      <option value="MAESTRÍA EN COMERCIO INTERNACIONAL">MAESTRÍA EN COMERCIO INTERNACIONAL</option>
-                      <option value="MAESTRÍA EN CREACIÓN Y DIRECCIÓN ESCÉNICA">MAESTRÍA EN CREACIÓN Y DIRECCIÓN ESCÉNICA</option>
-                      <option value="MAESTRÍA EN CONTABILIDAD">MAESTRÍA EN CONTABILIDAD</option>
-                      <option value="MAESTRÍA EN CULTURAS AUDIOVISUALES">MAESTRÍA EN CULTURAS AUDIOVISUALES</option>
-                      <option value="MAESTRÍA EN CIENCIAS ODONTOLÓGICAS">MAESTRÍA EN CIENCIAS ODONTOLÓGICAS</option>
-                      <option value="MAESTRÍA EN CIENCIAS BIOMÉDICAS">MAESTRÍA EN CIENCIAS BIOMÉDICAS</option>
-                      <option value="MAESTRÍA EN CIENCIAS - QUÍMICA">MAESTRÍA EN CIENCIAS - QUÍMICA</option>
-                      <option value="MAESTRÍA EN CIENCIAS - MATEMÁTICAS">MAESTRÍA EN CIENCIAS - MATEMÁTICAS</option>
-                      <option value="MAESTRÍA EN CIENCIAS - FÍSICA">MAESTRÍA EN CIENCIAS - FÍSICA</option>
-                      <option value="MAESTRÍA EN CALIDAD PARA LA GESTIÓN DE LAS ORGANIZACIONES">MAESTRÍA EN CALIDAD PARA LA GESTIÓN DE LAS ORGANIZACIONES</option>
-                      <option value="MAESTRÍA EN ANALITICA E INTELIGENCIA DE NEGOCIOS">MAESTRÍA EN ANALITICA E INTELIGENCIA DE NEGOCIOS</option>
-                      <option value="MAESTRÍA EN ADMINISTRACIÓN DE SALUD">MAESTRÍA EN ADMINISTRACIÓN DE SALUD</option>
-                      <option value="MAESTRÍA EN CIENCIAS DE LA ORGANIZACIÓN">MAESTRÍA EN CIENCIAS DE LA ORGANIZACIÓN</option>
-                      <option value="MAESTRÍA EN LOGÍSTICA Y GESTIÓN DE CADENAS DE ABASTECIMIENTO">MAESTRÍA EN LOGÍSTICA Y GESTIÓN DE CADENAS DE ABASTECIMIENTO</option>
-                      <option value="MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA SANITARIA Y AMBIENTAL">MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA SANITARIA Y AMBIENTAL</option>
-                      <option value="MAESTRÍA EN INGENIERÍA ÉNFASIS INGENIERÍA INDUSTRIAL">MAESTRÍA EN INGENIERÍA ÉNFASIS INGENIERÍA INDUSTRIAL</option>
-                      <option value="MAESTRÍA EN INTERNACIONALIZACIÓN DE LAS EMPRESAS DEL SECTOR DE LA CONSTRUCCIÓN">MAESTRÍA EN INTERNACIONALIZACIÓN DE LAS EMPRESAS DEL SECTOR DE LA CONSTRUCCIÓN</option>
-                      <option value="MAESTRÍA EN LINGÜÍSTICA Y ESPAÑOL">MAESTRÍA EN LINGÜÍSTICA Y ESPAÑOL</option>
-                      <option value="MAESTRÍA EN POLÍTICAS PÚBLICAS - SEDE ZARZAL">MAESTRÍA EN POLÍTICAS PÚBLICAS - SEDE ZARZAL</option>
-                      <option value="MAESTRíA EN MÚSICA">MAESTRíA EN MÚSICA</option>
-                      <option value="MAESTRÍA EN POLÍTICAS PÚBLICAS">MAESTRÍA EN POLÍTICAS PÚBLICAS</option>
-                      <option value="MAESTRÍA EN POLÍTICAS PÚBLICAS - SEDE TULUÁ">MAESTRÍA EN POLÍTICAS PÚBLICAS - SEDE TULUÁ</option>
-                      <option value="MAESTRÍA EN POLÍTICAS PÚBLICAS - EXTENSIÓN NARIÑO">MAESTRÍA EN POLÍTICAS PÚBLICAS - EXTENSIÓN NARIÑO</option>
-                      <option value="MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA MECÁNICA">MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA MECÁNICA</option>
-                      <option value="MAESTRÍA EN PROSPECTIVA E INNOVACIÓN">MAESTRÍA EN PROSPECTIVA E INNOVACIÓN</option>
-                      <option value="MAESTRÍA EN PSICOLOGÍA">MAESTRÍA EN PSICOLOGÍA</option>
-                      <option value="MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA QUÍMICA">MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA QUÍMICA</option>
-                      <option value="MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA DE SISTEMAS Y COMPUTACIÓN">MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA DE SISTEMAS Y COMPUTACIÓN</option>
-                      <option value="MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA ELECTRÓNICA">MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA ELECTRÓNICA</option>
-                      <option value="MAESTRIA EN GESTIÓN DE LA CALIDAD PARA LABORATORIOS">MAESTRIA EN GESTIÓN DE LA CALIDAD PARA LABORATORIOS</option>
-                      <option value="MAESTRÍA EN ESTADÍSTICA">MAESTRÍA EN ESTADÍSTICA</option>
-                      <option value="MAESTRÍA EN FILOSOFÍA - SEDE CALI">MAESTRÍA EN FILOSOFÍA - SEDE CALI</option>
-                      <option value="MAESTRÍA EN FILOSOFÍA - SEDE BUGA">MAESTRÍA EN FILOSOFÍA - SEDE BUGA</option>
-                      <option value="MAESTRÍA EN GERENCIA DE PROYECTOS">MAESTRÍA EN GERENCIA DE PROYECTOS</option>
-                      <option value="MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA ELÉCTRICA">MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA ELÉCTRICA</option>
-                      <option value="MAESTRÍA EN GERENCIA DE PROYECTOS - SEDE TULUÁ">MAESTRÍA EN GERENCIA DE PROYECTOS - SEDE TULUÁ</option>
-                      <option value="MAESTRÍA EN HISTORIA">MAESTRÍA EN HISTORIA</option>
-                      <option value="MAESTRÍA EN INGENIERÍA CON ÉNFASIS EN INGENIERÍA AEROESPACIAL">MAESTRÍA EN INGENIERÍA CON ÉNFASIS EN INGENIERÍA AEROESPACIAL</option>
-                      <option value="MAESTRÍA EN INGENIERÍA DE ALIMENTOS">MAESTRÍA EN INGENIERÍA DE ALIMENTOS</option>
-                      <option value="MAESTRÍA EN INGENIERÍA ÉNFASIS EN AUTOMÁTICA">MAESTRÍA EN INGENIERÍA ÉNFASIS EN AUTOMÁTICA</option>
-                      <option value="MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA CIVIL">MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA CIVIL</option>
-                      <option value="MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA DE LOS MATERIALES">MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA DE LOS MATERIALES</option>
-                      <option value="MAESTRÍA EN REDES DE COMUNICACIÓN">MAESTRÍA EN REDES DE COMUNICACIÓN</option>
-                      <option value="MAESTRÍA EN SALUD OCUPACIONALMAESTRÍA EN SALUD PÚBLICA">MAESTRÍA EN SALUD OCUPACIONALMAESTRÍA EN SALUD PÚBLICA</option>
-                      <option value="MAESTRÍA EN VALORACIÓN Y TASACIÓN DE BIENES">MAESTRÍA EN VALORACIÓN Y TASACIÓN DE BIENES</option>
-                      <option value="ESPECIALIZACIÓN EN ADMINISTRACIÓN DE EMPRESAS DE LA CONSTRUCCIÓN">ESPECIALIZACIÓN EN ADMINISTRACIÓN DE EMPRESAS DE LA CONSTRUCCIÓN</option>
-                      <option value="ESPECIALIZACIÓN EN GEOMÁTICA">ESPECIALIZACIÓN EN GEOMÁTICA</option>
-                      <option value="ESPECIALIZACIÓN EN FINANZAS - SEDE ZARZAL">ESPECIALIZACIÓN EN FINANZAS - SEDE ZARZAL</option>
-                      <option value="ESPECIALIZACIÓN EN FINANZAS - SEDE PACÍFICO">ESPECIALIZACIÓN EN FINANZAS - SEDE PACÍFICO</option>
-                      <option value="ESPECIALIZACIÓN EN ENFERMERÍA EN CUIDADO A LAS PERSONAS CON HERIDAS Y OSTOMÍAS">ESPECIALIZACIÓN EN ENFERMERÍA EN CUIDADO A LAS PERSONAS CON HERIDAS Y OSTOMÍAS</option>
-                      <option value="ESPECIALIZACIÓN EN FINANZAS">ESPECIALIZACIÓN EN FINANZAS</option>
-                      <option value="ESPECIALIZACIÓN EN ESTRUCTURAS">ESPECIALIZACIÓN EN ESTRUCTURAS</option>
-                      <option value="ESPECIALIZACIÓN EN ESTADÍSTICA APLICADA">ESPECIALIZACIÓN EN ESTADÍSTICA APLICADA</option>
-                      <option value="ESPECIALIZACIÓN EN AUDITORÍA EN SALUD - SEDE TULUÁ">ESPECIALIZACIÓN EN AUDITORÍA EN SALUD - SEDE TULUÁ</option>
-                      <option value="ESPECIALIZACIÓN EN ENDODONCIA">ESPECIALIZACIÓN EN ENDODONCIA</option>
-                      <option value="ESPECIALIZACIÓN EN CALIDAD DE LA GESTIÓN Y PRODUCTIVIDAD - SEDE TULUÁ">ESPECIALIZACIÓN EN CALIDAD DE LA GESTIÓN Y PRODUCTIVIDAD - SEDE TULUÁ</option>
-                      <option value="ESPECIALIZACIÓN EN CALIDAD DE LA GESTIÓN Y PRODUCTIVIDAD - SEDE CALI">ESPECIALIZACIÓN EN CALIDAD DE LA GESTIÓN Y PRODUCTIVIDAD - SEDE CALI</option>
-                      <option value="ESPECIALIZACIÓN EN AUTOMATIZACIÓN INDUSTRIAL">ESPECIALIZACIÓN EN AUTOMATIZACIÓN INDUSTRIAL</option>
-                      <option value="ESPECIALIZACIÓN EN AUDITORÍA EN SALUD - SEDE CALI">ESPECIALIZACIÓN EN AUDITORÍA EN SALUD - SEDE CALI</option>
-                      <option value="ESPECIALIZACIÓN EN ALTA GERENCIA - SEDE YUMBO">ESPECIALIZACIÓN EN ALTA GERENCIA - SEDE YUMBO</option>
-                      <option value="ESPECIALIZACIÓN EN ALTA GERENCIA- SEDE CALI">ESPECIALIZACIÓN EN ALTA GERENCIA- SEDE CALI</option>
-                      <option value="ESPECIALIZACIÓN EN CALIDAD DE LA GESTIÓN Y PRODUCTIVIDAD - MODALIDAD VIRTUAL">ESPECIALIZACIÓN EN CALIDAD DE LA GESTIÓN Y PRODUCTIVIDAD - MODALIDAD VIRTUAL</option>
-                      <option value="ESPECIALIZACIÓN EN ODONTOLOGÍA PEDIÁTRICA Y ORTOPEDIA MAXILAR">ESPECIALIZACIÓN EN ODONTOLOGÍA PEDIÁTRICA Y ORTOPEDIA MAXILAR</option>
-                      <option value="ESPECIALIZACION EN PERIODONCIA">ESPECIALIZACION EN PERIODONCIA</option>
-                      <option value="ESPECIALIZACIÓN EN PAISAJISMO">ESPECIALIZACIÓN EN PAISAJISMO</option>
-                      <option value="ESPECIALIZACION EN ORTODONCIA">ESPECIALIZACION EN ORTODONCIA</option>
-                      <option value="ESPECIALIZACIÓN EN GERENCIA PÚBLICA - SEDE TULUÁ">ESPECIALIZACIÓN EN GERENCIA PÚBLICA - SEDE TULUÁ</option>
-                      <option value="ESPECIALIZACIÓN EN GESTIÓN TRIBUTARIA">ESPECIALIZACIÓN EN GESTIÓN TRIBUTARIA</option>
-                      <option value="ESPECIALIZACIÓN EN GERENCIA PÚBLICA - SEDE ZARZAL">ESPECIALIZACIÓN EN GERENCIA PÚBLICA - SEDE ZARZAL</option>
-                      <option value="ESPECIALIZACIÓN EN GERENCIA PÚBLICA">ESPECIALIZACIÓN EN GERENCIA PÚBLICA</option>
-                      <option value="ESPECIALIZACIÓN EN GERENCIA DE MARKETING ESTRATÉGICO">ESPECIALIZACIÓN EN GERENCIA DE MARKETING ESTRATÉGICO</option>
-                      <option value="ESPECIALIZACIÓN EN GEOTECNIA">ESPECIALIZACIÓN EN GEOTECNIA</option>
-                      <option value="ESPECIALIZACIÓN EN PROCESOS DE INTERVENCIÓN SOCIAL">ESPECIALIZACIÓN EN PROCESOS DE INTERVENCIÓN SOCIAL</option>
-                      <option value="ESPECIALIZACIÓN EN REDES DE COMUNICACIÓN">ESPECIALIZACIÓN EN REDES DE COMUNICACIÓN</option>
-                      <option value="ESPECIALIZACIÓN EN REHABILITACIÓN ORAL">ESPECIALIZACIÓN EN REHABILITACIÓN ORAL</option>
-                      <option value="ESPECIALIZACIÓN EN SISTEMAS DE TRANSMISIÓN Y DISTRIBUCIÓN DE ENERGÍAELÉCTRICA">ESPECIALIZACIÓN EN SISTEMAS DE TRANSMISIÓN Y DISTRIBUCIÓN DE ENERGÍAELÉCTRICA</option>
                     </select>
                   </div>
                   <div class="form-check mt-3">
@@ -368,7 +286,7 @@ if (empty($_GET)) {
     </div>
   </footer>
   <!-- Scripts -->
-  <script type="text/javascript" src="../front/js/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>  
   <script type="text/javascript" src="../front/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="../front/js/jquery.validate.min.js"></script>
   <script type="text/javascript" src="../front/js/valid.js"></script>
