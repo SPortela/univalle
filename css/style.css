@@ -143,6 +143,17 @@ footer {
   margin-bottom: 5rem;
 }
 
+#univalledoc-form {
+  background-color: var(--primary-color);
+  border-radius: 1.5rem;
+  box-shadow: 0 0.1rem 0.1rem rgba(229, 103, 23, 0.075) inset, 0 0 0.5rem #000;
+  padding: 3rem;
+  margin-right: 0;
+  margin-left: 0;
+  border-width: 0.2rem;
+  margin-bottom: 5rem;
+}
+
 .section-form {
   background: transparent url("../assets/banner.png") no-repeat content-box;
 }
