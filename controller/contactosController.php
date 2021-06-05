@@ -125,7 +125,7 @@ switch ($accion) {
             $jsondata['success'] = true;
             $jsondata['message'] = 'Gracias por registrarte ' . $_REQUEST['txtName'] . ' pronto nos comunicaremos';
             /*Buscamos SEDES disponibles y activos */
-            $whereUser = " Where Us.Id > 1 AND Us.Status = 1 AND Us.Perfil = 1 ORDER BY Id ASC ";
+            $whereUser = " Where Us.Id = 3 AND Us.Status = 1 AND Us.Perfil = 1 ORDER BY Id ASC ";
             $resultUser = $datosUsuario->selectAll($whereUser);
             if ($db->numRows($resultUser) > 0) {
               $arrayIdAgenteDisponible = array();
@@ -187,7 +187,7 @@ switch ($accion) {
                 $IdDisponible = $arrayIdAgenteDisponible[0];
                 $CedulaDisponible = $arrayCedAgenteDisponible[0];
                 /*$CedulaDisponible = $arrayCedAgenteDisponible[0];$NombreDisponible = $arrayConcesionario;*/
-                $whereAgentesSede = " Where Us.Id > 2 AND Us.Status = 1 AND Us.Perfil = 0 AND Us.Sede = " . $IdDisponible . " ORDER BY Id ASC ";
+                $whereAgentesSede = " Where Us.Id = 4 AND Us.Status = 1 AND Us.Perfil = 0 AND Us.Sede = " . $IdDisponible . " ORDER BY Id ASC ";
                 $resultAgentesSede = $datosUsuario->selectAll($whereAgentesSede);
                 if ($db->numRows($resultAgentesSede) > 0) {
                   $arrayIdAgenteSedeDisponible = array();
