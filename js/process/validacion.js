@@ -23,7 +23,10 @@ $("#login").validate({
       data: { accion: "login", txtUser: vUser, txtPass: vPass },
       type: "POST",
       datatype: "json",
-      url: "../controller/accessController.php"
+      url: "../controller/accessController.php",
+      error: function (jqXHR, textStatus, errorThrown) {
+        console.error(jqXHR, textStatus, errorThrown);
+      }
     })
       .done(function (data) {
         if (data.success) {
@@ -48,8 +51,8 @@ $("#login").validate({
           document.getElementById("login").reset();
         }
       })
-      .fail(function (jqXHR, textStatus, errorThrown) {
-        console.error(jqXHR, textStatus, errorThrown);
+      .fail(function () {
+        alert("Error al tratar de Iniciar sesión Contacte al Administrador");
       });
   },
 });

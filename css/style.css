@@ -33,6 +33,25 @@ footer {
   font-size: 7rem;
 }
 
+.text-inscripcion{
+  font-size: 5rem;
+}
+
+.text-avanza{
+  font-size: 3.625rem; 
+  margin: -1rem
+}
+
+.text-crece{
+  font-size: 4.8125rem; 
+  margin: -1rem
+}
+
+.text-junto{
+  vertical-align: sub; 
+  font-size: 9.3125rem;
+}
+
 .sections {
   display: flex;
   flex-direction: column;
@@ -61,6 +80,24 @@ footer {
 .error{
   color: #fff;
   font-size: 1rem;
+}
+
+.terminos{
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+.terminos:after{
+  color: #fff;
+  text-decoration: none;
+}
+.terminos:hover{
+  color: #fff;
+  text-decoration: none;
+}
+.terminos:before{
+  color: #fff;
+  text-decoration: none;
 }
 
 #Enviar{
@@ -113,7 +150,7 @@ footer {
 .text-moment {
   font-family: 'Bebas Neue', cursive;
   color: #fff;
-  top: 60%;
+  top: 55%;
   position: relative;
   font-size: 4rem;
 }
@@ -175,5 +212,24 @@ footer {
 @media (max-width: 480px) {
   .section-form {
       background: #b74244;
+  }
+  .text-posgrado{
+    font-size: 5rem;
+  }
+  .text-inscripcion{
+    font-size: 4rem;
+  }
+  .juntos {
+    font-size: 6.3125rem;
+    margin: -1.5rem;
+  }
+  .text-avanza{
+    font-size: 2.625rem;
+  }
+  .text-crece{
+    font-size: 3.8125rem;
+  }
+  .text-junto{
+    font-size: 8.3125rem;
   }
 }

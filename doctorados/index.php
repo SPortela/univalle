@@ -16,7 +16,7 @@ if (empty($_GET)) {
   <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" /> 
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 </head>
@@ -26,12 +26,15 @@ if (empty($_GET)) {
     <div class="container-fluid">
       <div class="row">
         <div class="col-2 d-none d-lg-block">
-          <img src="../assets/top-left-lines.png" class="d-block m-auto" alt="" />
+          <picture>
+            <!-- <source srcset="../assets/top-right-lines.png" media="(max-width: 480px)"> -->
+            <img src="../assets/top-left-lines.png" class="d-block m-auto" alt="" />
+          </picture>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5">
           <p class="text-center text-header">
             Ofrecemos una amplia oferta de <br />
-            <strong class="text-red" style="font-size: 7rem">POSGRADOS</strong><br />
+            <strong class="text-red text-posgrado">POSGRADOS</strong><br />
             en diversos campos del conocimiento
           </p>
         </div>
@@ -110,16 +113,18 @@ if (empty($_GET)) {
                   <div class="form-check mt-3">
                     <label class="form-check-label text-white" style="font-size: 1.2rem" for="terminos">
                       <input type="checkbox" class="form-check-input" id="terminos" name="terminos" checked="" />
-                      Autorizo el tratamiento de mis datos personales de
-                      acuerdo con Política del Tratamiento de la Información
-                      Personal.
+                      <a class="terminos" href="https://www.univalle.edu.co/politica-de-tratamiento-de-la-informacion-personal">
+                        Autorizo el tratamiento de mis datos personales de
+                        acuerdo con Política del Tratamiento de la Información
+                        Personal.
+                      </a>
                     </label>
                     <input type="hidden" name="txtOrigen" value="0" id="txtOrigen" />
                     <input type="hidden" name="txtId" id="txtId" value=<?php echo $Id ?> />
                     <input type="hidden" name="txtCiudad" id="txtCiudad" value="1" />
                   </div>
-                  <div class="text-center">
-                    <button type="button" class="btn btn-light btn-lg" id="Enviar" value="Enviar">
+                  <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-light btn-lg" id="Enviar" value="Enviar">
                       Enviar
                     </button>
                   </div>
@@ -135,7 +140,7 @@ if (empty($_GET)) {
         <div class="row">
           <div class="col-12 mb-5 text-center">
             <p class="text-calendar">Calendario</p>
-            <strong class="text-red" style="font-size: 5rem">INSCRIPCIÓN Y ADMISIÓN</strong>
+            <strong class="text-red text-inscripcion">INSCRIPCIÓN Y ADMISIÓN</strong>
             <p class="text-calendar" style="font-size: 4.2rem">2021-2</p>
             <hr class="line-border mx-auto" />
             <p style="font-size: 3rem">CALI Y SEDES REGIONALES</p>
@@ -159,14 +164,14 @@ if (empty($_GET)) {
       <div class="container-fluid">
         <div class="row mb-3">
           <div class="col-md-12 col-lg-6 col-xs-12 section-info--text">
-            <p class="font-semib text-spacing" style="font-size: 3.625rem; margin: -1rem">
+            <p class="font-semib text-spacing text-avanza">
               AVANZAMOS Y
             </p>
-            <p class="font-bold text-spacing" style="font-size: 4.8125rem; margin: -1rem">
+            <p class="font-bold text-spacing text-crece">
               CRECEMOS
             </p>
             <p class="juntos font-bold">
-              <span style="vertical-align: sub; font-size: 9.3125rem">J</span>
+              <span class="text-junto">J</span>
               <span class="text-underline">UNTOS</span>
             </p>
             <p style="font-size: 1.8125rem">
@@ -175,7 +180,7 @@ if (empty($_GET)) {
           </div>
           <div class="col-md-6 d-none d-lg-block d-lx-none">
             <picture>
-              <img src="../assets/promo.jpeg" height="90%" alt="Imagen promocional Universidad del Valle" />
+              <img src="./assets/promo.jpeg" height="90%" alt="Imagen promocional Universidad del Valle" />
             </picture>
           </div>
         </div>
@@ -261,7 +266,7 @@ if (empty($_GET)) {
           <p class="font-bold text-white enlace">Área de Admisiones</p>
           <a class="enlace text-footer" href="mailto:direccion.posgrados@correounivalle.edu.co" target="_blank">direccion.posgrados@correounivalle.edu.co</a>
         </div>
-        <div class="col-md-4 col.xs-12">
+        <div class="col-md-4 col-xs-12 text-center text-md-start text-lg-start text-xl-start">
           <p class="font-bold text-white enlace">
             Edificio Administración Central
           </p>
@@ -286,7 +291,7 @@ if (empty($_GET)) {
     </div>
   </footer>
   <!-- Scripts -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>  
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
   <script type="text/javascript" src="../front/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="../front/js/jquery.validate.min.js"></script>
   <script type="text/javascript" src="../front/js/valid.js"></script>
@@ -302,7 +307,7 @@ if (empty($_GET)) {
         width: '100%',
         closeOnSelect: true,
         language: {
-            noResults: "No se encontraron resultados",
+          noResults: "No se encontraron resultados",
         },
         focus: true,
       });

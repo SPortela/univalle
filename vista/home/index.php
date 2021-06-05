@@ -10,23 +10,13 @@
 	if ($userId == 1) {
 		$where = " Where Id > 2 ";
 		$rt = 'reporte';
-	} elseif ($userId == 18) {
-		$userId = 5;
-		$where = " Where Id >= 4 AND Sede = " . $userId;
-		$rt = 'reporteu';
-	} elseif ($userId == 19) {
-		$where = " Where Id >= 4 AND Sede = " . $userId;
-		$rt = 'reportec';
-	} elseif ($userId == 25) {
-		$where = " Where Id >= 4 AND Sede = " . $userId;
-		$rt = 'reportecali';
 	} else {
-		$where = " Where Id >= 4 AND Sede = " . $userId;
+		$where = " Where Id >= 3 AND Sede = " . $userId;
 		$rt = 'reporte';
 	}
 	$result = $user->selectAll($where);
 
-	//COnsulta para opcion 1
+	//Consulta para opcion 1
 	$whereAdmin = " Where Status = 1 AND Id > 2 AND Perfil = 1 ";
 	$optionA = "";
 	$resultE = $user->selectAll($whereAdmin);
@@ -88,8 +78,6 @@
 								<option value="5">Administrativo</option>
 							</select>
 						</div>
-
-
 						<div class="form-group" id="selSuperAdmin">
 							<select class="form-control" name="SelSuper" id="SelSuper">
 								<option value="-1">Seleccione un super Administrador </option>
@@ -97,7 +85,6 @@
 
 							</select>
 						</div>
-
 
 						<div class="form-group">
 							<input type="text" class="form-control" id="txtUser" name="txtUser" placeholder="Ingrese un nombre de Usuario">

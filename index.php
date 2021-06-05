@@ -16,7 +16,7 @@ if (empty($_GET)) {
   <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" /> 
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
 
@@ -115,16 +115,18 @@ if (empty($_GET)) {
                   <div class="form-check mt-3">
                     <label class="form-check-label text-white" style="font-size: 1.2rem" for="terminos">
                       <input type="checkbox" class="form-check-input" id="terminos" name="terminos" checked="" />
-                      Autorizo el tratamiento de mis datos personales de
-                      acuerdo con Política del Tratamiento de la Información
-                      Personal.
+                      <a class="terminos" href="https://www.univalle.edu.co/politica-de-tratamiento-de-la-informacion-personal">
+                        Autorizo el tratamiento de mis datos personales de
+                        acuerdo con Política del Tratamiento de la Información
+                        Personal.
+                      </a>
                     </label>
                     <input type="hidden" name="txtOrigen" value="0" id="txtOrigen" />
                     <input type="hidden" name="txtId" id="txtId" value=<?php echo $Id ?> />
                     <input type="hidden" name="txtCiudad" id="txtCiudad" value="1" />
                   </div>
-                  <div class="text-center">
-                    <button type="button" class="btn btn-light btn-lg" id="Enviar" value="Enviar">
+                  <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-light btn-lg" id="Enviar" value="Enviar">
                       Enviar
                     </button>
                   </div>
@@ -140,7 +142,7 @@ if (empty($_GET)) {
         <div class="row">
           <div class="col-12 mb-5 text-center">
             <p class="text-calendar">Calendario</p>
-            <strong class="text-red" style="font-size: 5rem">INSCRIPCIÓN Y ADMISIÓN</strong>
+            <strong class="text-red text-inscripcion">INSCRIPCIÓN Y ADMISIÓN</strong>
             <p class="text-calendar" style="font-size: 4.2rem">2021-2</p>
             <hr class="line-border mx-auto" />
             <p style="font-size: 3rem">CALI Y SEDES REGIONALES</p>
@@ -164,14 +166,14 @@ if (empty($_GET)) {
       <div class="container-fluid">
         <div class="row mb-3">
           <div class="col-md-12 col-lg-6 col-xs-12 section-info--text">
-            <p class="font-semib text-spacing" style="font-size: 3.625rem; margin: -1rem">
+            <p class="font-semib text-spacing text-avanza">
               AVANZAMOS Y
             </p>
-            <p class="font-bold text-spacing" style="font-size: 4.8125rem; margin: -1rem">
+            <p class="font-bold text-spacing text-crece">
               CRECEMOS
             </p>
             <p class="juntos font-bold">
-              <span style="vertical-align: sub; font-size: 9.3125rem">J</span>
+              <span class="text-junto">J</span>
               <span class="text-underline">UNTOS</span>
             </p>
             <p style="font-size: 1.8125rem">
@@ -266,7 +268,7 @@ if (empty($_GET)) {
           <p class="font-bold text-white enlace">Área de Admisiones</p>
           <a class="enlace text-footer" href="mailto:direccion.posgrados@correounivalle.edu.co" target="_blank">direccion.posgrados@correounivalle.edu.co</a>
         </div>
-        <div class="col-md-4 col.xs-12">
+        <div class="col-md-4 col-xs-12">
           <p class="font-bold text-white enlace">
             Edificio Administración Central
           </p>
@@ -299,164 +301,488 @@ if (empty($_GET)) {
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.11/dist/sweetalert2.all.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
-      $('#txtSede').change(function(){
-          if($(this).val() != 1){
-            $('#txtFacultad').attr("disabled", true);
-            $('#txtFacultad').val(0);
-            $("#txtPrograma").empty();
-            $("#txtPrograma").append($("<option/>", { "value": "", text: "PROGRAMA" }));
-            switch ($(this).val())
-            {
-              case "2":
-                $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN FILOSOFÍA", text: "MAESTRÍA EN FILOSOFÍA" }));
-                break;
-              case "3":
-                $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN FINANZAS", text: "ESPECIALIZACIÓN EN FINANZAS" }));
-                break;
-              case "4":
-                $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN ALTA GERENCIA", text: "ESPECIALIZACIÓN EN ALTA GERENCIA" }));
-                break;
-              case "5":
-                $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN AUDITORÍA EN SALUD", text: "ESPECIALIZACIÓN EN AUDITORÍA EN SALUD" }));
-                $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN CALIDAD DE LA GESTIÓN Y PRODUCTIVIDAD", text: "ESPECIALIZACIÓN EN CALIDAD DE LA GESTIÓN Y PRODUCTIVIDAD" }));
-                $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN GERENCIA PÚBLICA", text: "ESPECIALIZACIÓN EN GERENCIA PÚBLICA" }));
-                $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN ADMINISTRACIÓN", text: "MAESTRÍA EN ADMINISTRACIÓN" }));
-                $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN GERENCIA DE PROYECTOS", text: "MAESTRÍA EN GERENCIA DE PROYECTOS" }));
-                $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN POLÍTICAS PÚBLICAS", text: "MAESTRÍA EN POLÍTICAS PÚBLICAS" }));
-                break;
-              case "6":
-                  $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN FINANZAS", text: "ESPECIALIZACIÓN EN FINANZAS" }));
-                  $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN GERENCIA PÚBLICA", text: "ESPECIALIZACIÓN EN GERENCIA PÚBLICA" }));
-                  $("#txtPrograma").append($("<option/>", { "value": "MAESTRíA EN EDUCACIÓN ÉNFASIS EN PEDAGOGÍA DE LA EDUCACIÓN SUPERIOR", text: "MAESTRíA EN EDUCACIÓN ÉNFASIS EN PEDAGOGÍA DE LA EDUCACIÓN SUPERIOR" }));
-                break;
-              case "7":
-                $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN POLÍTICAS PÚBLICAS", text: "MAESTRÍA EN POLÍTICAS PÚBLICAS" }));
-                break;
-              case "8":
-                $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN POLÍTICAS PÚBLICAS", text: "MAESTRÍA EN POLÍTICAS PÚBLICAS" }));
-                break;
-            }
+      $('#txtSede').change(function() {
+        if ($(this).val() != 1) {
+          $('#txtFacultad').attr("disabled", true);
+          $('#txtFacultad').val(0);
+          $("#txtPrograma").empty();
+          $("#txtPrograma").append($("<option/>", {
+            "value": "",
+            text: "PROGRAMA"
+          }));
+          switch ($(this).val()) {
+            case "2":
+              $("#txtPrograma").append($("<option/>", {
+                "value": "MAESTRÍA EN FILOSOFÍA",
+                text: "MAESTRÍA EN FILOSOFÍA"
+              }));
+              break;
+            case "3":
+              $("#txtPrograma").append($("<option/>", {
+                "value": "ESPECIALIZACIÓN EN FINANZAS",
+                text: "ESPECIALIZACIÓN EN FINANZAS"
+              }));
+              break;
+            case "4":
+              $("#txtPrograma").append($("<option/>", {
+                "value": "ESPECIALIZACIÓN EN ALTA GERENCIA",
+                text: "ESPECIALIZACIÓN EN ALTA GERENCIA"
+              }));
+              break;
+            case "5":
+              $("#txtPrograma").append($("<option/>", {
+                "value": "ESPECIALIZACIÓN EN AUDITORÍA EN SALUD",
+                text: "ESPECIALIZACIÓN EN AUDITORÍA EN SALUD"
+              }));
+              $("#txtPrograma").append($("<option/>", {
+                "value": "ESPECIALIZACIÓN EN CALIDAD DE LA GESTIÓN Y PRODUCTIVIDAD",
+                text: "ESPECIALIZACIÓN EN CALIDAD DE LA GESTIÓN Y PRODUCTIVIDAD"
+              }));
+              $("#txtPrograma").append($("<option/>", {
+                "value": "ESPECIALIZACIÓN EN GERENCIA PÚBLICA",
+                text: "ESPECIALIZACIÓN EN GERENCIA PÚBLICA"
+              }));
+              $("#txtPrograma").append($("<option/>", {
+                "value": "MAESTRÍA EN ADMINISTRACIÓN",
+                text: "MAESTRÍA EN ADMINISTRACIÓN"
+              }));
+              $("#txtPrograma").append($("<option/>", {
+                "value": "MAESTRÍA EN GERENCIA DE PROYECTOS",
+                text: "MAESTRÍA EN GERENCIA DE PROYECTOS"
+              }));
+              $("#txtPrograma").append($("<option/>", {
+                "value": "MAESTRÍA EN POLÍTICAS PÚBLICAS",
+                text: "MAESTRÍA EN POLÍTICAS PÚBLICAS"
+              }));
+              break;
+            case "6":
+              $("#txtPrograma").append($("<option/>", {
+                "value": "ESPECIALIZACIÓN EN FINANZAS",
+                text: "ESPECIALIZACIÓN EN FINANZAS"
+              }));
+              $("#txtPrograma").append($("<option/>", {
+                "value": "ESPECIALIZACIÓN EN GERENCIA PÚBLICA",
+                text: "ESPECIALIZACIÓN EN GERENCIA PÚBLICA"
+              }));
+              $("#txtPrograma").append($("<option/>", {
+                "value": "MAESTRíA EN EDUCACIÓN ÉNFASIS EN PEDAGOGÍA DE LA EDUCACIÓN SUPERIOR",
+                text: "MAESTRíA EN EDUCACIÓN ÉNFASIS EN PEDAGOGÍA DE LA EDUCACIÓN SUPERIOR"
+              }));
+              break;
+            case "7":
+              $("#txtPrograma").append($("<option/>", {
+                "value": "MAESTRÍA EN POLÍTICAS PÚBLICAS",
+                text: "MAESTRÍA EN POLÍTICAS PÚBLICAS"
+              }));
+              break;
+            case "8":
+              $("#txtPrograma").append($("<option/>", {
+                "value": "MAESTRÍA EN POLÍTICAS PÚBLICAS",
+                text: "MAESTRÍA EN POLÍTICAS PÚBLICAS"
+              }));
+              break;
           }
-          else{
-            $('#txtFacultad').attr("disabled", false);
-          }
+        } else {
+          $('#txtFacultad').attr("disabled", false);
+        }
       })
-      $('#txtFacultad').change(function(){
+      $('#txtFacultad').change(function() {
         $("#txtPrograma").empty();
-        $("#txtPrograma").append($("<option/>", { "value": "", text: "PROGRAMA" }));
-        switch ($(this).val())
-        {
+        $("#txtPrograma").append($("<option/>", {
+          "value": "",
+          text: "PROGRAMA"
+        }));
+        switch ($(this).val()) {
           case "1":
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN CIENCIAS - QUÍMICA", text: "MAESTRÍA EN CIENCIAS - QUÍMICA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN CIENCIAS - FÍSICA", text: "MAESTRÍA EN CIENCIAS - FÍSICA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN CIENCIAS - MATEMÁTICAS", text: "MAESTRÍA EN CIENCIAS - MATEMÁTICAS" }));
-            $("#txtPrograma").append($("<option/>", { "value": "DOCTORADO EN CIENCIAS DEL MAR", text: "DOCTORADO EN CIENCIAS DEL MAR" }));
-            $("#txtPrograma").append($("<option/>", { "value": "DOCTORADO EN CIENCIAS - QUÍMICAS", text: "DOCTORADO EN CIENCIAS - QUÍMICAS" }));
-            $("#txtPrograma").append($("<option/>", { "value": "DOCTORADO EN CIENCIAS - FÍSICA", text: "DOCTORADO EN CIENCIAS - FÍSICA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "DOCTORADO EN CIENCIAS - MATEMÁTICAS", text: "DOCTORADO EN CIENCIAS - MATEMÁTICAS" }));
-            $("#txtPrograma").append($("<option/>", { "value": "DOCTORADO EN CIENCIAS AMBIENTALES", text: "DOCTORADO EN CIENCIAS AMBIENTALES" }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN CIENCIAS - QUÍMICA",
+              text: "MAESTRÍA EN CIENCIAS - QUÍMICA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN CIENCIAS - FÍSICA",
+              text: "MAESTRÍA EN CIENCIAS - FÍSICA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN CIENCIAS - MATEMÁTICAS",
+              text: "MAESTRÍA EN CIENCIAS - MATEMÁTICAS"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "DOCTORADO EN CIENCIAS DEL MAR",
+              text: "DOCTORADO EN CIENCIAS DEL MAR"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "DOCTORADO EN CIENCIAS - QUÍMICAS",
+              text: "DOCTORADO EN CIENCIAS - QUÍMICAS"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "DOCTORADO EN CIENCIAS - FÍSICA",
+              text: "DOCTORADO EN CIENCIAS - FÍSICA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "DOCTORADO EN CIENCIAS - MATEMÁTICAS",
+              text: "DOCTORADO EN CIENCIAS - MATEMÁTICAS"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "DOCTORADO EN CIENCIAS AMBIENTALES",
+              text: "DOCTORADO EN CIENCIAS AMBIENTALES"
+            }));
             break;
           case "2":
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN LINGÜÍSTICA Y ESPAÑOL", text: "MAESTRÍA EN LINGÜÍSTICA Y ESPAÑOL" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN FILOSOFÍA", text: "MAESTRÍA EN FILOSOFÍA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN HISTORIA", text: "MAESTRÍA EN HISTORIA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "DOCTORADO EN FILOSOFÍA", text: "DOCTORADO EN FILOSOFÍA" }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN LINGÜÍSTICA Y ESPAÑOL",
+              text: "MAESTRÍA EN LINGÜÍSTICA Y ESPAÑOL"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN FILOSOFÍA",
+              text: "MAESTRÍA EN FILOSOFÍA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN HISTORIA",
+              text: "MAESTRÍA EN HISTORIA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "DOCTORADO EN FILOSOFÍA",
+              text: "DOCTORADO EN FILOSOFÍA"
+            }));
             break;
           case "3":
-            $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN PROCESOS DE INTERVENCIÓN SOCIAL", text: "ESPECIALIZACIÓN EN PROCESOS DE INTERVENCIÓN SOCIAL" }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "ESPECIALIZACIÓN EN PROCESOS DE INTERVENCIÓN SOCIAL",
+              text: "ESPECIALIZACIÓN EN PROCESOS DE INTERVENCIÓN SOCIAL"
+            }));
             break;
-          case "4": 
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRíA EN EDUCACIÓN ÉNFASIS EN FILOSOFÍA PARA LA PAZ", text: "MAESTRíA EN EDUCACIÓN ÉNFASIS EN FILOSOFÍA PARA LA PAZ" }));
-            $("#txtPrograma").append($("<option/>", { "value": "DOCTORADO INTERINSTITUCIONAL EN EDUCACIÓN", text: "DOCTORADO INTERINSTITUCIONAL EN EDUCACIÓN" }));
+          case "4":
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRíA EN EDUCACIÓN ÉNFASIS EN FILOSOFÍA PARA LA PAZ",
+              text: "MAESTRíA EN EDUCACIÓN ÉNFASIS EN FILOSOFÍA PARA LA PAZ"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "DOCTORADO INTERINSTITUCIONAL EN EDUCACIÓN",
+              text: "DOCTORADO INTERINSTITUCIONAL EN EDUCACIÓN"
+            }));
             break;
-          case "5": 
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN PSICOLOGÍA", text: "MAESTRÍA EN PSICOLOGÍA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "DOCTORADO EN PSICOLOGÍA", text: "DOCTORADO EN PSICOLOGÍA" }));
+          case "5":
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN PSICOLOGÍA",
+              text: "MAESTRÍA EN PSICOLOGÍA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "DOCTORADO EN PSICOLOGÍA",
+              text: "DOCTORADO EN PSICOLOGÍA"
+            }));
             break;
-          case "6": 
-            $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN ADMINISTRACIÓN DE EMPRESAS DE LA CONSTRUCCIÓN", text: "ESPECIALIZACIÓN EN ADMINISTRACIÓN DE EMPRESAS DE LA CONSTRUCCIÓN" }));
-            $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN PAISAJISMO", text: "ESPECIALIZACIÓN EN PAISAJISMO" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN INTERNACIONALIZACIÓN DE LAS EMPRESAS DEL SECTOR DE LA CONSTRUCCIÓN", text: "MAESTRÍA EN INTERNACIONALIZACIÓN DE LAS EMPRESAS DEL SECTOR DE LA CONSTRUCCIÓN" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN CREACIÓN Y DIRECCIÓN ESCÉNICA", text: "MAESTRÍA EN CREACIÓN Y DIRECCIÓN ESCÉNICA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN CULTURAS AUDIOVISUALES", text: "MAESTRÍA EN CULTURAS AUDIOVISUALES" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRíA EN MÚSICA", text: "MAESTRíA EN MÚSICA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN VALORACIÓN Y TASACIÓN DE BIENES", text: "MAESTRÍA EN VALORACIÓN Y TASACIÓN DE BIENES" }));
-            $("#txtPrograma").append($("<option/>", { "value": "DOCTORADO EN GESTIÓN URBANA Y DEL TERRITORIO", text: "DOCTORADO EN GESTIÓN URBANA Y DEL TERRITORIO" }));
+          case "6":
+            $("#txtPrograma").append($("<option/>", {
+              "value": "ESPECIALIZACIÓN EN ADMINISTRACIÓN DE EMPRESAS DE LA CONSTRUCCIÓN",
+              text: "ESPECIALIZACIÓN EN ADMINISTRACIÓN DE EMPRESAS DE LA CONSTRUCCIÓN"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "ESPECIALIZACIÓN EN PAISAJISMO",
+              text: "ESPECIALIZACIÓN EN PAISAJISMO"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN INTERNACIONALIZACIÓN DE LAS EMPRESAS DEL SECTOR DE LA CONSTRUCCIÓN",
+              text: "MAESTRÍA EN INTERNACIONALIZACIÓN DE LAS EMPRESAS DEL SECTOR DE LA CONSTRUCCIÓN"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN CREACIÓN Y DIRECCIÓN ESCÉNICA",
+              text: "MAESTRÍA EN CREACIÓN Y DIRECCIÓN ESCÉNICA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN CULTURAS AUDIOVISUALES",
+              text: "MAESTRÍA EN CULTURAS AUDIOVISUALES"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRíA EN MÚSICA",
+              text: "MAESTRíA EN MÚSICA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN VALORACIÓN Y TASACIÓN DE BIENES",
+              text: "MAESTRÍA EN VALORACIÓN Y TASACIÓN DE BIENES"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "DOCTORADO EN GESTIÓN URBANA Y DEL TERRITORIO",
+              text: "DOCTORADO EN GESTIÓN URBANA Y DEL TERRITORIO"
+            }));
             break;
           case "7":
-            $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN AUDITORÍA EN SALUD", text: "ESPECIALIZACIÓN EN AUDITORÍA EN SALUD" }));
-            $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACION EN PERIODONCIA", text: "ESPECIALIZACION EN PERIODONCIA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN ODONTOLOGÍA PEDIÁTRICA Y ORTOPEDIA MAXILAR", text: "ESPECIALIZACIÓN EN ODONTOLOGÍA PEDIÁTRICA Y ORTOPEDIA MAXILAR" }));
-            $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACION EN ORTODONCIA", text: "ESPECIALIZACION EN ORTODONCIA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN REHABILITACIÓN ORAL", text: "ESPECIALIZACIÓN EN REHABILITACIÓN ORAL" }));
-            $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN ENFERMERÍA EN CUIDADO A LAS PERSONAS CON HERIDAS Y OSTOMÍAS", text: "ESPECIALIZACIÓN EN ENFERMERÍA EN CUIDADO A LAS PERSONAS CON HERIDAS Y OSTOMÍAS" }));
-            $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN ENDODONCIA", text: "ESPECIALIZACIÓN EN ENDODONCIA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRIA EN GESTIÓN DE LA CALIDAD PARA LABORATORIOS", text: "MAESTRIA EN GESTIÓN DE LA CALIDAD PARA LABORATORIOS" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN CIENCIAS BIOMÉDICAS", text: "MAESTRÍA EN CIENCIAS BIOMÉDICAS" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN CIENCIAS ODONTOLÓGICAS", text: "MAESTRÍA EN CIENCIAS ODONTOLÓGICAS" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN SALUD PÚBLICA", text: "MAESTRÍA EN SALUD PÚBLICA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN SALUD OCUPACIONAL", text: "MAESTRÍA EN SALUD OCUPACIONAL" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN ADMINISTRACIÓN DE SALUD", text: "MAESTRÍA EN ADMINISTRACIÓN DE SALUD" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN EPIDEMIOLOGÍA", text: "MAESTRÍA EN EPIDEMIOLOGÍA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "DOCTORADO EN CIENCIAS BIOMÉDICAS", text: "DOCTORADO EN CIENCIAS BIOMÉDICAS" }));
-            break; 
+            $("#txtPrograma").append($("<option/>", {
+              "value": "ESPECIALIZACIÓN EN AUDITORÍA EN SALUD",
+              text: "ESPECIALIZACIÓN EN AUDITORÍA EN SALUD"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "ESPECIALIZACION EN PERIODONCIA",
+              text: "ESPECIALIZACION EN PERIODONCIA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "ESPECIALIZACIÓN EN ODONTOLOGÍA PEDIÁTRICA Y ORTOPEDIA MAXILAR",
+              text: "ESPECIALIZACIÓN EN ODONTOLOGÍA PEDIÁTRICA Y ORTOPEDIA MAXILAR"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "ESPECIALIZACION EN ORTODONCIA",
+              text: "ESPECIALIZACION EN ORTODONCIA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "ESPECIALIZACIÓN EN REHABILITACIÓN ORAL",
+              text: "ESPECIALIZACIÓN EN REHABILITACIÓN ORAL"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "ESPECIALIZACIÓN EN ENFERMERÍA EN CUIDADO A LAS PERSONAS CON HERIDAS Y OSTOMÍAS",
+              text: "ESPECIALIZACIÓN EN ENFERMERÍA EN CUIDADO A LAS PERSONAS CON HERIDAS Y OSTOMÍAS"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "ESPECIALIZACIÓN EN ENDODONCIA",
+              text: "ESPECIALIZACIÓN EN ENDODONCIA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRIA EN GESTIÓN DE LA CALIDAD PARA LABORATORIOS",
+              text: "MAESTRIA EN GESTIÓN DE LA CALIDAD PARA LABORATORIOS"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN CIENCIAS BIOMÉDICAS",
+              text: "MAESTRÍA EN CIENCIAS BIOMÉDICAS"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN CIENCIAS ODONTOLÓGICAS",
+              text: "MAESTRÍA EN CIENCIAS ODONTOLÓGICAS"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN SALUD PÚBLICA",
+              text: "MAESTRÍA EN SALUD PÚBLICA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN SALUD OCUPACIONAL",
+              text: "MAESTRÍA EN SALUD OCUPACIONAL"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN ADMINISTRACIÓN DE SALUD",
+              text: "MAESTRÍA EN ADMINISTRACIÓN DE SALUD"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN EPIDEMIOLOGÍA",
+              text: "MAESTRÍA EN EPIDEMIOLOGÍA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "DOCTORADO EN CIENCIAS BIOMÉDICAS",
+              text: "DOCTORADO EN CIENCIAS BIOMÉDICAS"
+            }));
+            break;
           case "8":
-            $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN GEOMÁTICA", text: "ESPECIALIZACIÓN EN GEOMÁTICA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN GEOTECNIA", text: "ESPECIALIZACIÓN EN GEOTECNIA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN ESTRUCTURAS", text: "ESPECIALIZACIÓN EN ESTRUCTURAS" }));
-            $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN REDES DE COMUNICACIÓN", text: "ESPECIALIZACIÓN EN REDES DE COMUNICACIÓN" }));
-            $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN AUTOMATIZACIÓN INDUSTRIAL", text: "ESPECIALIZACIÓN EN AUTOMATIZACIÓN INDUSTRIAL" }));
-            $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN SISTEMAS DE TRANSMISIÓN Y DISTRIBUCIÓN DE ENERGÍA ELÉCTRICA", text: "ESPECIALIZACIÓN EN SISTEMAS DE TRANSMISIÓN Y DISTRIBUCIÓN DE ENERGÍA ELÉCTRICA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN ESTADÍSTICA APLICADA", text: "ESPECIALIZACIÓN EN ESTADÍSTICA APLICADA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN INGENIERÍA ÉNFASIS EN AUTOMÁTICA", text: "MAESTRÍA EN INGENIERÍA ÉNFASIS EN AUTOMÁTICA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA CIVIL", text: "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA CIVIL" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA ELÉCTRICA", text: "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA ELÉCTRICA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA ELECTRÓNICA", text: "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA ELECTRÓNICA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN INGENIERÍA ÉNFASIS INGENIERÍA INDUSTRIAL", text: "MAESTRÍA EN INGENIERÍA ÉNFASIS INGENIERÍA INDUSTRIAL" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA DE LOS MATERIALES", text: "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA DE LOS MATERIALES" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA MECÁNICA", text: "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA MECÁNICA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA QUÍMICA", text: "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA QUÍMICA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA SANITARIA Y AMBIENTAL", text: "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA SANITARIA Y AMBIENTAL" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA DE SISTEMAS Y COMPUTACIÓN", text: "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA DE SISTEMAS Y COMPUTACIÓN" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN INGENIERÍA CON ÉNFASIS EN INGENIERÍA AEROESPACIAL", text: "MAESTRÍA EN INGENIERÍA CON ÉNFASIS EN INGENIERÍA AEROESPACIAL" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN ESTADÍSTICA", text: "MAESTRÍA EN ESTADÍSTICA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN LOGÍSTICA Y GESTIÓN DE CADENAS DE ABASTECIMIENTO", text: "MAESTRÍA EN LOGÍSTICA Y GESTIÓN DE CADENAS DE ABASTECIMIENTO" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN REDES DE COMUNICACIÓN", text: "MAESTRÍA EN REDES DE COMUNICACIÓN" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN ANALITICA E INTELIGENCIA DE NEGOCIOS", text: "MAESTRÍA EN ANALITICA E INTELIGENCIA DE NEGOCIOS" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN DESARROLLO SUSTENTABLE", text: "MAESTRÍA EN DESARROLLO SUSTENTABLE" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN INGENIERÍA DE ALIMENTOS", text: "MAESTRÍA EN INGENIERÍA DE ALIMENTOS" }));
-            $("#txtPrograma").append($("<option/>", { "value": "DOCTORADO EN INGENIERÍA ÉNFASIS EN INGENIERÍA DE ALIMENTOS", text: "DOCTORADO EN INGENIERÍA ÉNFASIS EN INGENIERÍA DE ALIMENTOS" }));
-            $("#txtPrograma").append($("<option/>", { "value": "DOCTORADO EN INGENIERÍA ÉNFASIS EN CIENCIAS DE LA COMPUTACIÓN", text: "DOCTORADO EN INGENIERÍA ÉNFASIS EN CIENCIAS DE LA COMPUTACIÓN" }));
-            $("#txtPrograma").append($("<option/>", { "value": "DOCTORADO EN INGENIERÍA ÉNFASIS EN INGENIERÍA ELÉCTRICA Y ELECTRÓNICA", text: "DOCTORADO EN INGENIERÍA ÉNFASIS EN INGENIERÍA ELÉCTRICA Y ELECTRÓNICA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "DOCTORADO EN INGENIERÍA ÉNFASIS INGENIERÍA DE MATERIALES", text: "DOCTORADO EN INGENIERÍA ÉNFASIS INGENIERÍA DE MATERIALES" }));
-            $("#txtPrograma").append($("<option/>", { "value": "DOCTORADO EN INGENIERÍA ÉNFASIS INGENIERÍA QUÍMICA", text: "DOCTORADO EN INGENIERÍA ÉNFASIS INGENIERÍA QUÍMICA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "DOCTORADO EN INGENIERÍA ÉNFASIS INGENIERÍA SANITARIA Y AMBIENTAL", text: "DOCTORADO EN INGENIERÍA ÉNFASIS INGENIERÍA SANITARIA Y AMBIENTAL" }));
-            $("#txtPrograma").append($("<option/>", { "value": "DOCTORADO EN INGENIERÍA ÉNFASIS EN INGENIERÍA INDUSTRIAL", text: "DOCTORADO EN INGENIERÍA ÉNFASIS EN INGENIERÍA INDUSTRIAL" }));
-            $("#txtPrograma").append($("<option/>", { "value": "DOCTORADO EN INGENIERÍA ÉNFASIS EN MECÁNICA DE SÓLIDOS", text: "DOCTORADO EN INGENIERÍA ÉNFASIS EN MECÁNICA DE SÓLIDOS" }));
-            $("#txtPrograma").append($("<option/>", { "value": "DOCTORADO EN INGENIERÍA ELÉCTRICA Y ELECTRÓNICA", text: "DOCTORADO EN INGENIERÍA ELÉCTRICA Y ELECTRÓNICA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "DOCTORADO EN MECÁNICA APLICADA", text: "DOCTORADO EN MECÁNICA APLICADA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "DOCTORADO EN INGENIERÍA MECÁNICA", text: "DOCTORADO EN INGENIERÍA MECÁNICA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "DOCTORADO EN BIOINGENIERÍA", text: "DOCTORADO EN BIOINGENIERÍA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA SANITARIA Y AMBIENTAL", text: "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA SANITARIA Y AMBIENTAL" }));
-            break; 
+            $("#txtPrograma").append($("<option/>", {
+              "value": "ESPECIALIZACIÓN EN GEOMÁTICA",
+              text: "ESPECIALIZACIÓN EN GEOMÁTICA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "ESPECIALIZACIÓN EN GEOTECNIA",
+              text: "ESPECIALIZACIÓN EN GEOTECNIA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "ESPECIALIZACIÓN EN ESTRUCTURAS",
+              text: "ESPECIALIZACIÓN EN ESTRUCTURAS"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "ESPECIALIZACIÓN EN REDES DE COMUNICACIÓN",
+              text: "ESPECIALIZACIÓN EN REDES DE COMUNICACIÓN"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "ESPECIALIZACIÓN EN AUTOMATIZACIÓN INDUSTRIAL",
+              text: "ESPECIALIZACIÓN EN AUTOMATIZACIÓN INDUSTRIAL"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "ESPECIALIZACIÓN EN SISTEMAS DE TRANSMISIÓN Y DISTRIBUCIÓN DE ENERGÍA ELÉCTRICA",
+              text: "ESPECIALIZACIÓN EN SISTEMAS DE TRANSMISIÓN Y DISTRIBUCIÓN DE ENERGÍA ELÉCTRICA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "ESPECIALIZACIÓN EN ESTADÍSTICA APLICADA",
+              text: "ESPECIALIZACIÓN EN ESTADÍSTICA APLICADA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN INGENIERÍA ÉNFASIS EN AUTOMÁTICA",
+              text: "MAESTRÍA EN INGENIERÍA ÉNFASIS EN AUTOMÁTICA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA CIVIL",
+              text: "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA CIVIL"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA ELÉCTRICA",
+              text: "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA ELÉCTRICA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA ELECTRÓNICA",
+              text: "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA ELECTRÓNICA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN INGENIERÍA ÉNFASIS INGENIERÍA INDUSTRIAL",
+              text: "MAESTRÍA EN INGENIERÍA ÉNFASIS INGENIERÍA INDUSTRIAL"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA DE LOS MATERIALES",
+              text: "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA DE LOS MATERIALES"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA MECÁNICA",
+              text: "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA MECÁNICA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA QUÍMICA",
+              text: "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA QUÍMICA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA SANITARIA Y AMBIENTAL",
+              text: "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA SANITARIA Y AMBIENTAL"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA DE SISTEMAS Y COMPUTACIÓN",
+              text: "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA DE SISTEMAS Y COMPUTACIÓN"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN INGENIERÍA CON ÉNFASIS EN INGENIERÍA AEROESPACIAL",
+              text: "MAESTRÍA EN INGENIERÍA CON ÉNFASIS EN INGENIERÍA AEROESPACIAL"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN ESTADÍSTICA",
+              text: "MAESTRÍA EN ESTADÍSTICA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN LOGÍSTICA Y GESTIÓN DE CADENAS DE ABASTECIMIENTO",
+              text: "MAESTRÍA EN LOGÍSTICA Y GESTIÓN DE CADENAS DE ABASTECIMIENTO"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN REDES DE COMUNICACIÓN",
+              text: "MAESTRÍA EN REDES DE COMUNICACIÓN"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN ANALITICA E INTELIGENCIA DE NEGOCIOS",
+              text: "MAESTRÍA EN ANALITICA E INTELIGENCIA DE NEGOCIOS"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN DESARROLLO SUSTENTABLE",
+              text: "MAESTRÍA EN DESARROLLO SUSTENTABLE"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN INGENIERÍA DE ALIMENTOS",
+              text: "MAESTRÍA EN INGENIERÍA DE ALIMENTOS"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "DOCTORADO EN INGENIERÍA ÉNFASIS EN INGENIERÍA DE ALIMENTOS",
+              text: "DOCTORADO EN INGENIERÍA ÉNFASIS EN INGENIERÍA DE ALIMENTOS"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "DOCTORADO EN INGENIERÍA ÉNFASIS EN CIENCIAS DE LA COMPUTACIÓN",
+              text: "DOCTORADO EN INGENIERÍA ÉNFASIS EN CIENCIAS DE LA COMPUTACIÓN"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "DOCTORADO EN INGENIERÍA ÉNFASIS EN INGENIERÍA ELÉCTRICA Y ELECTRÓNICA",
+              text: "DOCTORADO EN INGENIERÍA ÉNFASIS EN INGENIERÍA ELÉCTRICA Y ELECTRÓNICA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "DOCTORADO EN INGENIERÍA ÉNFASIS INGENIERÍA DE MATERIALES",
+              text: "DOCTORADO EN INGENIERÍA ÉNFASIS INGENIERÍA DE MATERIALES"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "DOCTORADO EN INGENIERÍA ÉNFASIS INGENIERÍA QUÍMICA",
+              text: "DOCTORADO EN INGENIERÍA ÉNFASIS INGENIERÍA QUÍMICA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "DOCTORADO EN INGENIERÍA ÉNFASIS INGENIERÍA SANITARIA Y AMBIENTAL",
+              text: "DOCTORADO EN INGENIERÍA ÉNFASIS INGENIERÍA SANITARIA Y AMBIENTAL"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "DOCTORADO EN INGENIERÍA ÉNFASIS EN INGENIERÍA INDUSTRIAL",
+              text: "DOCTORADO EN INGENIERÍA ÉNFASIS EN INGENIERÍA INDUSTRIAL"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "DOCTORADO EN INGENIERÍA ÉNFASIS EN MECÁNICA DE SÓLIDOS",
+              text: "DOCTORADO EN INGENIERÍA ÉNFASIS EN MECÁNICA DE SÓLIDOS"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "DOCTORADO EN INGENIERÍA ELÉCTRICA Y ELECTRÓNICA",
+              text: "DOCTORADO EN INGENIERÍA ELÉCTRICA Y ELECTRÓNICA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "DOCTORADO EN MECÁNICA APLICADA",
+              text: "DOCTORADO EN MECÁNICA APLICADA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "DOCTORADO EN INGENIERÍA MECÁNICA",
+              text: "DOCTORADO EN INGENIERÍA MECÁNICA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "DOCTORADO EN BIOINGENIERÍA",
+              text: "DOCTORADO EN BIOINGENIERÍA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA SANITARIA Y AMBIENTAL",
+              text: "MAESTRÍA EN INGENIERÍA ÉNFASIS EN INGENIERÍA SANITARIA Y AMBIENTAL"
+            }));
+            break;
           case "9":
-            $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN FINANZAS", text: "ESPECIALIZACIÓN EN FINANZAS" }));
-            $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN GERENCIA DE MARKETING ESTRATÉGICO", text: "ESPECIALIZACIÓN EN GERENCIA DE MARKETING ESTRATÉGICO" }));
-            $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN CALIDAD DE LA GESTIÓN Y PRODUCTIVIDAD", text: "ESPECIALIZACIÓN EN CALIDAD DE LA GESTIÓN Y PRODUCTIVIDAD" }));
-            $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN GESTIÓN TRIBUTARIA", text: "ESPECIALIZACIÓN EN GESTIÓN TRIBUTARIA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN GERENCIA PÚBLICA", text: "ESPECIALIZACIÓN EN GERENCIA PÚBLICA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "ESPECIALIZACIÓN EN ALTA GERENCIA", text: "ESPECIALIZACIÓN EN ALTA GERENCIA" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN CIENCIAS DE LA ORGANIZACIÓN", text: "MAESTRÍA EN CIENCIAS DE LA ORGANIZACIÓN" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN POLÍTICAS PÚBLICAS", text: "MAESTRÍA EN POLÍTICAS PÚBLICAS" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN ADMINISTRACIÓN", text: "MAESTRÍA EN ADMINISTRACIÓN" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN CONTABILIDAD", text: "MAESTRÍA EN CONTABILIDAD" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN COMERCIO INTERNACIONAL", text: "MAESTRÍA EN COMERCIO INTERNACIONAL" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN CALIDAD PARA LA GESTIÓN DE LAS ORGANIZACIONES", text: "MAESTRÍA EN CALIDAD PARA LA GESTIÓN DE LAS ORGANIZACIONES" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN GERENCIA DE PROYECTOS", text: "MAESTRÍA EN GERENCIA DE PROYECTOS" }));
-            $("#txtPrograma").append($("<option/>", { "value": "MAESTRÍA EN PROSPECTIVA E INNOVACIÓN", text: "MAESTRÍA EN PROSPECTIVA E INNOVACIÓN" }));
-            $("#txtPrograma").append($("<option/>", { "value": "DOCTORADO EN ADMINISTRACIÒN", text: "DOCTORADO EN ADMINISTRACIÒN" }));
-            $("#txtPrograma").append($("<option/>", { "value": "DOCTORADO EN GOBIERNO, POLÍTICA PÚBLICA Y ADMINISTRACIÓN PÚBLICA", text: "DOCTORADO EN GOBIERNO, POLÍTICA PÚBLICA Y ADMINISTRACIÓN PÚBLICA" }));
-            break; 
+            $("#txtPrograma").append($("<option/>", {
+              "value": "ESPECIALIZACIÓN EN FINANZAS",
+              text: "ESPECIALIZACIÓN EN FINANZAS"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "ESPECIALIZACIÓN EN GERENCIA DE MARKETING ESTRATÉGICO",
+              text: "ESPECIALIZACIÓN EN GERENCIA DE MARKETING ESTRATÉGICO"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "ESPECIALIZACIÓN EN CALIDAD DE LA GESTIÓN Y PRODUCTIVIDAD",
+              text: "ESPECIALIZACIÓN EN CALIDAD DE LA GESTIÓN Y PRODUCTIVIDAD"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "ESPECIALIZACIÓN EN GESTIÓN TRIBUTARIA",
+              text: "ESPECIALIZACIÓN EN GESTIÓN TRIBUTARIA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "ESPECIALIZACIÓN EN GERENCIA PÚBLICA",
+              text: "ESPECIALIZACIÓN EN GERENCIA PÚBLICA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "ESPECIALIZACIÓN EN ALTA GERENCIA",
+              text: "ESPECIALIZACIÓN EN ALTA GERENCIA"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN CIENCIAS DE LA ORGANIZACIÓN",
+              text: "MAESTRÍA EN CIENCIAS DE LA ORGANIZACIÓN"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN POLÍTICAS PÚBLICAS",
+              text: "MAESTRÍA EN POLÍTICAS PÚBLICAS"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN ADMINISTRACIÓN",
+              text: "MAESTRÍA EN ADMINISTRACIÓN"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN CONTABILIDAD",
+              text: "MAESTRÍA EN CONTABILIDAD"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN COMERCIO INTERNACIONAL",
+              text: "MAESTRÍA EN COMERCIO INTERNACIONAL"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN CALIDAD PARA LA GESTIÓN DE LAS ORGANIZACIONES",
+              text: "MAESTRÍA EN CALIDAD PARA LA GESTIÓN DE LAS ORGANIZACIONES"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN GERENCIA DE PROYECTOS",
+              text: "MAESTRÍA EN GERENCIA DE PROYECTOS"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "MAESTRÍA EN PROSPECTIVA E INNOVACIÓN",
+              text: "MAESTRÍA EN PROSPECTIVA E INNOVACIÓN"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "DOCTORADO EN ADMINISTRACIÒN",
+              text: "DOCTORADO EN ADMINISTRACIÒN"
+            }));
+            $("#txtPrograma").append($("<option/>", {
+              "value": "DOCTORADO EN GOBIERNO, POLÍTICA PÚBLICA Y ADMINISTRACIÓN PÚBLICA",
+              text: "DOCTORADO EN GOBIERNO, POLÍTICA PÚBLICA Y ADMINISTRACIÓN PÚBLICA"
+            }));
+            break;
         }
       })
     });
