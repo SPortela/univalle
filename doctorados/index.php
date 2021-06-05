@@ -68,7 +68,7 @@ if (empty($_GET)) {
                 </p>
               </div>
               <div class="col-12 mt-4">
-                <form role="form" id="univalle-form">
+                <form role="form" id="univalledoc-form">
                   <div class="form-group">
                     <label for="txtName"></label>
                     <input type="text" class="form-control form-control-lg" name="txtName" id="txtName" placeholder="NOMBRE Y APELLIDO" />
