@@ -22,11 +22,10 @@ if ($vId == 22) {
 	$reception = " OR rg.Created_by = " . $vId;
 }
 if (!isset($_GET['v'])) {
-	$where = " WHERE (rg.Asignado_a = '" . $cedula_agente . "' " . $reception . ") GROUP BY rg.Id  ORDER BY Status ASC, Created_date DESC ";
+	$where = " WHERE (rg.Asignado_a = " . $cedula_agente . " " . $reception . ") GROUP BY rg.Id  ORDER BY Status ASC, Created_date DESC ";
 } else {
-	$where = " WHERE (rg.Asignado_a = " . $cedula_agente .  " " . $reception . ")  AND rg.Status =  " . $valor . " GROUP BY rg.Id  ORDER BY Status ASC, Created_date DESC ";
+	$where = " WHERE (rg.Asignado_a = '" . $cedula_agente . "' " . $reception . ") AND rg.Status =  " . $valor . " GROUP BY rg.Id  ORDER BY Status ASC, Created_date DESC ";
 }
-
 $UsuarioAct = new usuario($db);
 $whereAct = " WHERE Id = " . $vId;
 $resultAct = $UsuarioAct->selectAll($whereAct);
@@ -70,7 +69,7 @@ if ($db->numRows($resultE2) > 0) {
 	}
 }
 // Cuenta numero de contactos sin gestionar
-$whereCount = " WHERE rg.STATUS = 2  AND Asignado_a =" . $cedula_agente;
+$whereCount = " WHERE rg.STATUS = 2  AND Asignado_a = '" . $cedula_agente . "'";
 $sin_gestionar = $contact->Count($whereCount);
 if ($db->numRows($sin_gestionar) > 0) {
 	$rows = $db->datos($sin_gestionar);
@@ -812,92 +811,6 @@ if ($db->numRows($resultD2) > 0) {
 	</div>
 	<!-- End Gestionar Contacto -->
 
-	<!-- BEGIN CEDER REGISTRO -->
-	<div id="ceder-modal" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Ceder Registro</h4>
-				</div>
-				<div class="modal-body">
-					<form id="ceder-form" autocomplete="off">
-						<div class="row g-3">
-							<div class="col-sm-12 mb-3 text-center">
-								<label for="txtAgente">Agente a Ceder
-									<select class="form-control" name="txtAgente" id="txtAgente" required>
-										<option value="">Seleccione</option>
-										<?php echo $optionAgentes; ?>
-									</select>
-								</label>
-							</div>
-						</div>
-						<div class="row g-3">
-							<div class="col text-center">
-								<input type="hidden" name="txtCederId" id="txtCederId">
-								<button type="submit" class="btn btn-default">Enviar</button>
-							</div>
-						</div>
-					</form>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-				</div>
-			</div>
-
-		</div>
-	</div>
-	<!-- END CEDER REGISTRO -->
-
-	<!-- BEGIN CEDER REGISTROS -->
-	<div id="ceder-varios-modal" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-			<!-- Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Ceder Registros</h4>
-				</div>
-				<div class="modal-body">
-					<form id="ceder-varios-form" autocomplete="off">
-						<div class="row g-3">
-							<div class="col-sm-6">
-								<label for="txtAgenteV">
-									Agente a Ceder
-									<select class="form-control" name="txtAgenteV" id="txtAgenteV" required>
-										<option value="">Seleccione</option>
-										<?php echo $optionAgentes; ?>
-									</select>
-								</label>
-							</div>
-							<div class="col-sm-6">
-								<label for="txtCantidad">
-									Cantidad a Ceder
-									<input class="form-control form-control-sm" type="number" name="txtCantidad" id="txtCantidad" required>
-								</label>
-							</div>
-						</div>
-						<div class="row g-3">
-							<div class="col-sm-12">
-								<input type="hidden" name="txtIdUser" value=<?php echo $vId ?>>
-								<div class="form-text text-center">Se cederan solo registros en estado <strong>Asignado</strong></div>
-							</div>
-							<div class="col-sm-12 text-center">
-								<button type="submit" class="btn btn-default">Enviar</button>
-							</div>
-						</div>
-					</form>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-				</div>
-			</div>
-
-		</div>
-	</div>
-	<!-- END CEDER REGISTROS -->
-
 	<!-- container section start -->
 	<section id="container">
 		<!-- pinta header -->
@@ -1023,7 +936,6 @@ if ($db->numRows($resultD2) > 0) {
 							<input type="hidden" name="CedulaAgente" id="CedulaAgente" value=<?php echo $cedula_agente; ?>>
 							<button type="submit" class="btn btn-info">Descargar</button>
 							<button type="button" class="btn btn-success" data-toggle="modal" data-target="#NuevaEmpresa"> Nuevo Paciente </button>
-							<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#ceder-varios-modal"> Ceder Contactos </button>
 						</form>
 					</div>
 				</div>
@@ -1063,8 +975,7 @@ if ($db->numRows($resultD2) > 0) {
 												<center>
 													<a href=\"#\" onclick=\"javascript:VerDatos('" . $r['Id'] . "');\"  class=\"btn btn-default btn-md btn-xs\" title=\"Ver Información\">Ver</a>&nbsp;
 													<a href=\"#\" onclick=\"javascript:cargaModal('" . $r['IdNoti'] . "');\"  class=\"btn btn-success btn-md btn-xs\" title=\"Gestionar Cita\" id=\"\">Gestionar Cita</a>&nbsp;
-													<a href=\"../historial/?v=" . $r['Id'] . "\" class=\"btn btn-info btn-md btn-xs\" title=\"Actividades\">Historial</a>&nbsp;
-													<a href=\"#\" onclick=\"javascript:cederContacto('" . $r['Id'] . "');\" class=\"btn btn-warning btn-md btn-xs\" title=\"Ceder Contacto\" id=\"\">Ceder Contacto</a>&nbsp;
+													<a href=\"../historial/?v=" . $r['Id'] . "\" class=\"btn btn-info btn-md btn-xs\" title=\"Actividades\">Historial</a>&nbsp;													
 												</center>
 											</td>";
 									} else {
@@ -1074,7 +985,6 @@ if ($db->numRows($resultD2) > 0) {
 													<a href=\"#\" onclick=\"javascript:VerDatos('" . $r['Id'] . "');\" class=\"btn btn-default btn-md btn-xs\" title=\"Ver Información\">Ver</a>&nbsp;
 													<a href=\"#\" onclick=\"javascript:cargaGestion('" . $r['Id'] . "');\" class=\"btn btn-success btn-md btn-xs\" title=\"Gestionar\" id=\"\">Gestionar</a>&nbsp;
 													<a href=\"../historial/?v=" . $r['Id'] . "\" class=\"btn btn-info btn-md btn-xs\" title=\"Historial\">Historial</a>&nbsp;
-													<a href=\"#\" onclick=\"javascript:cederContacto('" . $r['Id'] . "');\" class=\"btn btn-warning btn-md btn-xs\" title=\"Ceder Contacto\" id=\"\">Ceder Contacto</a>&nbsp;	
 												</center>
 											</td>";
 									}

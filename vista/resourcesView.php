@@ -426,7 +426,7 @@
 								<li><a class="" href="../agente/">Todos</a></li>';
 				if ($db->numRows($result) > 0) {
 					while ($rA = $db->datos($result)) {
-						$Wcount = ' WHERE  rg.Status =' . $rA['Id_estado'] . ' AND rg.Asignado_a = ' . $cedula_agente;
+						$Wcount = ' WHERE rg.Asignado_a = ' . $cedula_agente . ' AND rg.Status =' . $rA['Id_estado'];
 						$rCount = $contact->Count($Wcount);
 						if ($db->numRows($rCount) > 0) {
 							$cuenta = $db->datos($rCount);

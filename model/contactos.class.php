@@ -26,12 +26,18 @@
         */
         public function selectAll($where = ""){
              /** Realiza el query */
-                $sql = "SELECT rg.Id, rg.Nombre_completo,  rg.Celular, rg.Email, rg.Ciudad, rg.Tratamiento, rg.Campana_Id, rg.Origen_Campana, rg.Created_date, rg.Created_by, rg.Status, rg.Status2, rg.Asignado_a, rg.Fecha_asignado, st.Nombre AS Nombre_estado, st.Color AS Color, st2.Nombre AS Nombre_estado2, us.Nombre AS Nombre_agente, us.Usuario As Usuario_agente, us.Sede AS Sede, us2.nombre AS NombreCreador
+                $sql = "SELECT rg.Id, rg.Nombre_completo,  rg.Celular, rg.Email, rg.Ciudad, rg.Tratamiento, 
+                rg.Campana_Id, rg.Origen_Campana, rg.Created_date, rg.Status, rg.Status2, 
+                rg.Asignado_a, rg.Fecha_asignado, st.Nombre AS Nombre_estado, st.Id AS Id_estado, 
+                st.Color AS Color, st2.Nombre AS Nombre_estado2, us.Nombre AS Nombre_agente, 
+                us.Usuario As Usuario_agente, us.Sede AS Sede, us2.nombre AS NombreCreador,  
+                nt.Fecha_Cita, nt.Id AS IdNoti,  nt.Status AS NotiStatus, rg.Created_by
                     FROM " . $this->table ." rg
                     	LEFT JOIN estados st ON st.Id = rg.Status
                     	LEFT JOIN estados st2 ON st2.Id = rg.Status2
 						LEFT JOIN usuarios us ON us.Cedula = rg.Asignado_a
                         LEFT JOIN usuarios us2 ON us2.Id = rg.Created_by
+                        LEFT JOIN notificaciones nt ON nt.Empresa_Id = rg.Id
                     ". $where. "";
             //echo $sql;
             $result = $this->db->ejecutar($sql);
