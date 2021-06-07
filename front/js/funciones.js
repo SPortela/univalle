@@ -59,7 +59,7 @@ $("#univalle-form").validate({
     var vTra = $('#txtPrograma').val();
     var vOrigen = $('#txtOrigen').val();
     var urlc = "controller/contactosController.php";
-    var vCity = "Cali";
+    var vCity = $('#txtSede').val();
     var vIdM = $('#txtId').val();
     var vData = {
       "accion": 'ins', 
