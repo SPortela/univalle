@@ -14,7 +14,7 @@
 		$where = " Where rg.Id > 0 AND Origen_Campana = 'Google Ads' ORDER BY rg.Created_date DESC";
 		// $where = " Where rg.Id > 0 AND Origen_Campana = 'Google Ads' GROUP BY rg.Cedula, rg.Mensaje, rg.Programa ORDER BY rg.Status, rg.Created_date DESC";
 		$whereC =  " Where rg.Id > 0 ";
-		$title = "Total Contactos DHI";
+		$title = "Total Contactos";
 	}elseif($_GET['v'] == 0){
 			$where = " Where rg.Id > 0 AND rg.Status > 1 AND rg.Status <> 12 AND Origen_Campana = 'Google Ads' GROUP BY rg.Cedula, rg.Mensaje, rg.Programa ORDER BY rg.Status, rg.Created_date DESC ";
 			$whereC = " Where rg.Id > 0 AND rg.Status > 1 AND rg.Status <> 12 AND Origen_Campana = 'Google Ads' ";
@@ -23,12 +23,12 @@
 	elseif($_GET['v'] == 1){
 		$where = " Where rg.Id > 0 AND Origen_Campana = 'Google Ads'  AND  rg.Status = " .$_GET['v']. " GROUP BY rg.Cedula, rg.Mensaje,	 rg.Programa ORDER BY rg.Status, rg.Created_date DESC ";
 		$whereC = " Where rg.Id > 0 AND Origen_Campana = 'Google Ads' AND rg.Status = " .$_GET['v']. "";
-		$title = "Contactos Registrados DHI";
+		$title = "Contactos Registrados";
 	}else
 	{
 		$where = " Where rg.Id > 0 AND Origen_Campana = 'Google Ads'  AND rg.Status = " .$_GET['v']. " GROUP BY rg.Cedula, rg.Mensaje,	 rg.Programa ORDER BY rg.Status, rg.Created_date DESC ";
 		$whereC = " Where rg.Id > 0 AND Origen_Campana = 'Google Ads'  AND rg.Status = " .$_GET['v']. "";
-		$title = "Contactos Cargados DHI";
+		$title = "Contactos Cargados";
 	}
 
 
@@ -62,7 +62,7 @@
   <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
   <meta name="author" content="GeeksLabs">
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
-  <title>Agencia - DHI</title>
+  <title>Agencia - Universidad del Valle</title>
  	<!-- Recursos Css -->
  	<!-- Date Piker -->
  	<link href="../../assets/datepicker/jquery-ui.css" rel="stylesheet">
@@ -209,7 +209,7 @@
 		               <th><i class="icon_profile"></i>Nombre</th>
 		               <th><i class="icon_profile"></i>Teléfono</th>
 		               <th><i class="icon_profile"></i>Email</th>
-		               <th><i class="icon_profile"></i>Tratamiento</th>
+		               <th><i class="icon_profile"></i>Programa</th>
 		               <th><i class="icon_profile"></i>Ciudad</th>
 	                    <th><i class="icon_mobile"></i>Fecha registro</th>
 	                    <th><i class="icon_mobile"></i>Origen</th>

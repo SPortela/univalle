@@ -144,16 +144,9 @@ $resultD2 = $Notifi->selectAll($whereNoti);
 							<input type="text" class="form-control" id="txtCel" name="txtCel" placeholder="ingrese el teléfono fijo" required="">
 						</div>
 						<div class="form-group">
-							<label for="pwd">Tratamiento:</label>
+							<label for="pwd">Programa:</label>
 							<select class="form-control" name="txtTratamiento" id="txtTratamiento" required="">
-								<option value="">Tratamiento de tu interes</option>
-								<option value="Implante Capilar">Implante Capilar</option>
-								<option value="Diagnóstico">Diagnóstico</option>
-								<option value="Restauración de barba">Restauración de barba</option>
-								<option value="Restauración de cejas">Restauración de cejas</option>
-								<option value="Tratamiento de regeneración capilar">Tratamiento de regeneración capilar</option>
-								<option value="Micropigmentación">Micropigmentación</option>
-								<option value="Alopecia femenina">Alopecia femenina</option>
+								
 							</select>
 						</div>
 
@@ -240,7 +233,7 @@ $resultD2 = $Notifi->selectAll($whereNoti);
 						</tr>
 						<tr>
 							<td>
-								<p>Tratamiento</p>
+								<p>Programa</p>
 							</td>
 							<td>
 								<p id="dir"></p>
@@ -428,7 +421,7 @@ $resultD2 = $Notifi->selectAll($whereNoti);
 								<th>Email</th>
 								<th>Celular</th>
 								<th>Ciudad</th>
-								<th>Tratamiento</th>
+								<th>Programa</th>
 								<th>Sede</th>
 								<th width="15%">Acciones</th>
 							</tr>

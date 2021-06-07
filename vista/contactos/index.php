@@ -95,6 +95,7 @@ $result = $contact->selectAll($where);
 // Objeto Usarios - Agentes
 $agente = new usuario($db);
 $whereA = " Where Us.Status = 1 AND  Us.Perfil = 0 AND Us.Sede = " . $userId;
+$optionA = "";
 $resultAgente = $agente->selectAll($whereA);
 if ($db->numRows($resultAgente) > 0) {
 	while ($rA = $db->datos($resultAgente)) {

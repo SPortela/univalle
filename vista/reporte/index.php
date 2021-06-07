@@ -572,7 +572,7 @@
 		      </div>
 
 
-		      <div class="col-md-4" style="background-color: ">
+		      <div class="col-md-4">
 		      	<h3 class="page-header"><i class="fa fa-laptop"></i> Filtre su reporte </h3>
 
 		      <form class="form-inline" action="" method="get">
@@ -1037,7 +1037,7 @@
 
             	        ],
 	    	        datasets: [{
-	    	            label: 'TRATAMIENTOS',
+	    	            label: 'PROGRAMAS',
 
 
 	    	                	        data: [
@@ -1108,7 +1108,7 @@
 
 	    	            	        ],
 	    		    	        datasets: [{
-	    		    	            label: 'TRATAMIENTOS',
+	    		    	            label: 'PROGRAMAS',
 
 
 	    		    	                	        data: [

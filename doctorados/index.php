@@ -180,7 +180,7 @@ if (empty($_GET)) {
           </div>
           <div class="col-md-6 d-none d-lg-block d-lx-none">
             <picture>
-              <img src="./assets/promo.jpeg" height="90%" alt="Imagen promocional Universidad del Valle" />
+              <img src="../assets/promo.jpeg" height="90%" alt="Imagen promocional Universidad del Valle" />
             </picture>
           </div>
         </div>

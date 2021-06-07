@@ -359,16 +359,8 @@ if ($db->numRows($resultD2) > 0) {
 							<input type="text" class="form-control" id="txtCelO" name="txtCelO" placeholder="ingrese el teléfono fijo" required="">
 						</div>
 						<div class="form-group">
-							<label for="pwd">Tratamiento:</label>
+							<label for="pwd">Programa:</label>
 							<select class="form-control" name="txtTratamientoO" id="txtTratamientoO" required="">
-								<option value="">Tratamiento de tu interes</option>
-								<option value="Implante Capilar">Implante Capilar</option>
-								<option value="Diagnóstico">Diagnóstico</option>
-								<option value="Restauración de barba">Restauración de barba</option>
-								<option value="Restauración de cejas">Restauración de cejas</option>
-								<option value="Tratamiento de regeneración capilar">Tratamiento de regeneración capilar</option>
-								<option value="Micropigmentación">Micropigmentación</option>
-								<option value="Alopecia femenina">Alopecia femenina</option>
 							</select>
 						</div>
 						<div class="form-group">
@@ -685,7 +677,7 @@ if ($db->numRows($resultD2) > 0) {
 
 						<tr>
 							<td>
-								<p>Tratamiento</p>
+								<p>Programa</p>
 							</td>
 							<td>
 								<p id="tra"></p>
