@@ -10,6 +10,7 @@ include_once("../../model/estados.class.php");
 include_once("../../model/notificaciones.class.php");
 
 $cedula_agente = Session::get('Cedula');
+$perfil_usr = Session::get('Perfil');
 $vId = Session::get('Id');
 $contact = new contacto($db);
 $where = " Where rg.Created_by = " . $vId . " GROUP BY rg.Id  ORDER BY Status ASC, Created_date DESC ";
@@ -127,7 +128,7 @@ $resultD2 = $Notifi->selectAll($whereNoti);
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Registro Paciente</h4>
+					<h4 class="modal-title">Registro</h4>
 				</div>
 				<div class="modal-body">
 					<form id="Paciente">
@@ -396,13 +397,15 @@ $resultD2 = $Notifi->selectAll($whereNoti);
 						<ol class="breadcrumb">
 							<li><i class="fa fa-home"></i><a href="index.php">Inicio</a></li>
 							<li><i class="fa fa-laptop"></i>Clientes</li>
-							<li><strong class="msj"> Tienes <?php echo $rows["num"]; ?> pacientes registrados </strong></li>
+							<li><strong class="msj"> Tienes <?php echo $rows["num"]; ?> Clientes registrados </strong></li>
 							<li></li>
 						</ol>
-						<form method="post" action="descargar_excel_agente.php" style="position: relative; top:0px;">
+						<form method="post" action="../descargar_xls.php" style="position: relative; top:0px;">
 							<input type="text" name="txtFecha1" id="txtFecha1" value="" class="date" placeholder="Fecha Numero1">
 							<input type="text" name="txtFecha2" id="txtFecha2" value="" class="date" placeholder="Fecha Numero2">
-							<input type="hidden" name="CedulaAgente" id="CedulaAgente" value=<?php echo $IdUser; ?>>
+							<input type="hidden" name="CedulaAgente" id="CedulaAgente" value=<?php echo $cedula_agente; ?>>
+							<input type="hidden" name="Sede" id="Sede" value=<?php echo $IdUser; ?>>
+							<input type="hidden" name="Perfil" id="Perfil" value="<? echo $perfil_usr ?>">
 							<button type="submit" class="btn btn-info">Descargar</button>
 							<button type="button" class="btn btn-success" data-toggle="modal" data-target="#NuevaEmpresa"> Nuevo Paciente </button>
 							<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal"> Cargar Contactos </button>

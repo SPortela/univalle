@@ -9,6 +9,7 @@ include_once("../../model/usuarios.class.php");
 $contact = new contacto($db);
 $cedula_agente = Session::get('Cedula');
 $userId = Session::get('Id');
+$perfil_usr = Session::get('Perfil');
 
 $cTotalTab = "";
 if ($userId == 3) {

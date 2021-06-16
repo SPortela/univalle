@@ -57,16 +57,16 @@
         public function selectDescarga($where = ""){
              /** Realiza el query */
                 $sql = "SELECT rg.Id, rg.Nombre_completo,  rg.Celular, rg.Email, rg.Tratamiento, 
-                rg.Campana_Id, rg.Origen_Campana, rg.Created_date, rg.Status, rg.Status2, rg.Asignado_a, 
-                rg.Fecha_asignado, st.Nombre AS Nombre_estado, st2.Nombre AS Nombre_estado2, 
-                MAX(hr.Detalle) AS Detalle, hr.Registro_id AS Registro_id,  us.Nombre AS NombreAgente, 
-                uss.Nombre NombreSede, us.Usuario As UsuarioAgente, us.Sede AS Sede
+                               rg.Campana_Id, rg.Origen_Campana, rg.Created_date, rg.Status, 
+                               rg.Status2, rg.Asignado_a, rg.Fecha_asignado, st.Nombre AS Nombre_estado, 
+                               st2.Nombre AS Nombre_estado2, 
+                               (SELECT MAX(hr.Detalle) FROM hoja_ruta hr WHERE hr.Registro_id = rg.Id)  Detalle, 
+                               us.Nombre AS NombreAgente, uss.Nombre NombreSede, us.Usuario As UsuarioAgente, us.Sede, rg.Ciudad
                     FROM " . $this->table ." rg
                     	LEFT JOIN estados st ON st.Id = rg.Status
                     	LEFT JOIN estados st2 ON st2.Id = rg.Status2
 						LEFT JOIN usuarios us ON us.Cedula = rg.Asignado_a
                         LEFT JOIN usuarios uss ON uss.Id = us.Sede
-						LEFT JOIN hoja_ruta hr ON hr.Registro_id = rg.Id
                     ". $where. "";
             //echo $sql;
             $result = $this->db->ejecutar($sql);

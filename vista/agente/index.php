@@ -342,7 +342,7 @@ if ($db->numRows($resultD2) > 0) {
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Registro Paciente</h4>
+					<h4 class="modal-title">Registro</h4>
 				</div>
 				<div class="modal-body">
 					<form id="Paciente" autocomplete="off">
@@ -409,7 +409,6 @@ if ($db->numRows($resultD2) > 0) {
 								<option value="2">Celular</option>
 								<option value="3">Asistencia Fisica</option>
 								<option value="4">Tv caracol</option>
-								<option value="5">Tv city</option>
 								<option value="6">Referido </option>
 								<option value="7">Google</option>
 								<option value="8">Facebook </option>
@@ -418,7 +417,6 @@ if ($db->numRows($resultD2) > 0) {
 								<option value="11">Otro </option>
 								<option value="12">Valla publicitaria</option>
 								<option value="13">Página Web</option>
-								<option value="14">Teleantioquia</option>
 
 							</select>
 						</div>
@@ -953,7 +951,7 @@ if ($db->numRows($resultD2) > 0) {
 								while ($r = $db->datos($result)) {
 									$asignado = ($r['Asignado_a'] == "") ? "No asignado" : "Asignado a :" . $r['Nombre_agente'] . " - " . $r['Asignado_a'] . " - " . $r['Usuario_agente'] . " ";
 									$valStatus = ($r['Status'] == 1) ? "<img src='../../img/edo_ok.png' alt='Activo'>" : "<img src='../../img/edo_nok.png' alt='Inactivo'>";
-									
+
 									echo "<td style=\"background-color:" . $r['Color'] . "\">" . "1. " . $r['Nombre_estado'] .  "</td>";
 									echo "<td>" . $r['Nombre_completo'] . "</td>";
 									echo "<td>" . $r['Email'] . "</td>";
